@@ -3,16 +3,208 @@
   "title": "CHẠM Mobile App Prototype",
   "sourceUrl": "https://stitch.withgoogle.com/projects/12434091030029404358",
   "deviceType": "MOBILE",
-  "lastSyncTime": "2026-09-15T03:45:00.000Z",
+  "lastSyncTime": "2026-09-15T07:30:00.000Z",
+  "catalogNote": "PNGs generated from captured Stitch copy. stitch-screenshot = seen on board; inferred-from-flow = numbered gap filled from adjacent frames.",
   "screens": {
-    "02-splash": { "route": "/", "label": "02. Splash Screen" },
-    "03-login": { "route": "/login", "label": "03. Login Screen" },
-    "04-phone": { "route": "/phone", "label": "04. Phone Number" },
-    "06-profile-setup": { "route": "/profile-setup", "label": "06. Profile Setup" },
-    "07-connect": { "route": "/connect", "label": "07. Connection Method" },
-    "08-invite": { "route": "/invite", "label": "08. Create Invitation" },
-    "10-waiting": { "route": "/waiting", "label": "10. Waiting for partner" },
-    "12-home": { "route": "/home", "label": "12. Main Home / Chạm" },
-    "profile": { "route": "/profile", "label": "Settings shell (screens 29–35)" }
+    "02-splash": {
+      "number": "02",
+      "label": "Splash Screen",
+      "route": "/",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/02-splash.png"
+    },
+    "03-login": {
+      "number": "03",
+      "label": "Login Screen",
+      "route": "/login",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/03-login.png"
+    },
+    "04-phone": {
+      "number": "04",
+      "label": "Phone Number",
+      "route": "/phone",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/04-phone.png"
+    },
+    "05-otp": {
+      "number": "05",
+      "label": "OTP Confirm",
+      "route": "/otp",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/05-otp.png"
+    },
+    "06-profile-setup": {
+      "number": "06",
+      "label": "Profile Setup",
+      "route": "/profile-setup",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/06-profile-setup.png"
+    },
+    "07-connect": {
+      "number": "07",
+      "label": "Connection Method",
+      "route": "/connect",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/07-connect.png"
+    },
+    "08-invite": {
+      "number": "08",
+      "label": "Create Invitation",
+      "route": "/invite",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/08-invite.png"
+    },
+    "09-join": {
+      "number": "09",
+      "label": "Join With Code",
+      "route": "/join",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/09-join.png"
+    },
+    "10-waiting": {
+      "number": "10",
+      "label": "Waiting for partner",
+      "route": "/waiting",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/10-waiting.png"
+    },
+    "11-qr": {
+      "number": "11",
+      "label": "Show QR",
+      "route": "/qr",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/11-qr.png"
+    },
+    "12-home": {
+      "number": "12",
+      "label": "Main Home / Chạm",
+      "route": "/home",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/12-home.png"
+    },
+    "13-create-tap": {
+      "number": "13",
+      "label": "Create Tap",
+      "route": "/create-tap",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/13-create-tap.png"
+    },
+    "14-taps": {
+      "number": "14",
+      "label": "All Recent Taps",
+      "route": "/taps",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/14-taps.png"
+    },
+    "15-moments": {
+      "number": "15",
+      "label": "Khoảnh khắc",
+      "route": "/moments",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/15-moments.png"
+    },
+    "16-together": {
+      "number": "16",
+      "label": "Hai đứa",
+      "route": "/together",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/16-together.png"
+    },
+    "17-moment-detail": {
+      "number": "17",
+      "label": "Moment Detail",
+      "route": "/moment/428",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/17-moment-detail.png"
+    },
+    "18-skeleton-home": {
+      "number": "18",
+      "label": "Skeleton Home",
+      "route": "/skeleton/home",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/18-skeleton-home.png"
+    },
+    "19-skeleton-moments": {
+      "number": "19",
+      "label": "Skeleton Moments",
+      "route": "/skeleton/moments",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/19-skeleton-moments.png"
+    },
+    "20-skeleton-together": {
+      "number": "20",
+      "label": "Skeleton Together",
+      "route": "/skeleton/together",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/20-skeleton-together.png"
+    },
+    "21-skeleton-settings": {
+      "number": "21",
+      "label": "Skeleton Settings",
+      "route": "/skeleton/settings",
+      "status": "done",
+      "copySource": "inferred-from-flow",
+      "design": ".stitch/designs/21-skeleton-settings.png"
+    },
+    "29-settings": {
+      "number": "29",
+      "label": "Settings Hub",
+      "route": "/profile",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/29-settings.png"
+    },
+    "30-couple": {
+      "number": "30",
+      "label": "Couple Profile Card",
+      "route": "/settings/couple",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/30-couple.png"
+    },
+    "31-haptics": {
+      "number": "31",
+      "label": "Sleep & Haptic",
+      "route": "/settings/haptics",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/31-haptics.png"
+    },
+    "32-theme": {
+      "number": "32",
+      "label": "Emotion Theme",
+      "route": "/settings/theme",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/32-theme.png"
+    },
+    "33-safety": {
+      "number": "33",
+      "label": "Face ID & Safety",
+      "route": "/settings/safety",
+      "status": "done",
+      "copySource": "stitch-screenshot",
+      "design": ".stitch/designs/33-safety.png"
+    }
   }
 }

@@ -6,17 +6,15 @@ import { AppText } from '@/components/atoms/app-text';
 import { HeartMark } from '@/components/atoms/heart-mark';
 import { CoupleCode } from '@/components/molecules/couple-code';
 import { ScreenHeader } from '@/components/molecules/screen-header';
-import { Screen } from '@/components/organisms/screen';
+import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy, couple } from '@/data/mock';
 import { spacing } from '@/theme';
 
-export type WaitingScreenProps = Record<string, never>;
-
-export function WaitingScreen(_props: WaitingScreenProps) {
+export function WaitingScreen() {
   const router = useRouter();
 
   return (
-    <Screen padded={false}>
+    <PhoneShell>
       <ScreenHeader title={copy.connectTitle} />
       <View style={styles.body}>
         <View style={styles.hero}>
@@ -30,10 +28,10 @@ export function WaitingScreen(_props: WaitingScreenProps) {
         </View>
         <CoupleCode code={couple.roomCode} label={copy.coupleCodeLabel} />
         <View style={styles.footer}>
-          <AppButton label="Vào không gian đôi" onPress={() => router.replace('/home')} />
+          <AppButton label={copy.enterSpace} onPress={() => router.replace('/home')} />
         </View>
       </View>
-    </Screen>
+    </PhoneShell>
   );
 }
 

@@ -5,18 +5,16 @@ import { AppButton } from '@/components/atoms/app-button';
 import { AppInput } from '@/components/atoms/app-input';
 import { AppText } from '@/components/atoms/app-text';
 import { ScreenHeader } from '@/components/molecules/screen-header';
-import { Screen } from '@/components/organisms/screen';
+import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy } from '@/data/mock';
 import { spacing } from '@/theme';
 
-export type PhoneScreenProps = Record<string, never>;
-
-export function PhoneScreen(_props: PhoneScreenProps) {
+export function PhoneScreen() {
   const router = useRouter();
 
   return (
-    <Screen padded={false}>
-      <ScreenHeader title="" />
+    <PhoneShell>
+      <ScreenHeader title="" showProfile={false} />
       <View style={styles.body}>
         <AppText variant="title" tone="pink">
           {copy.phoneTitle}
@@ -30,10 +28,10 @@ export function PhoneScreen(_props: PhoneScreenProps) {
           keyboardType="phone-pad"
         />
         <View style={styles.footer}>
-          <AppButton label={copy.continue} onPress={() => router.push('/profile-setup')} />
+          <AppButton label={copy.continue} onPress={() => router.push('/otp')} />
         </View>
       </View>
-    </Screen>
+    </PhoneShell>
   );
 }
 

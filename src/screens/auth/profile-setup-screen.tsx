@@ -6,18 +6,16 @@ import { AppInput } from '@/components/atoms/app-input';
 import { AppText } from '@/components/atoms/app-text';
 import { HeartMark } from '@/components/atoms/heart-mark';
 import { ScreenHeader } from '@/components/molecules/screen-header';
-import { Screen } from '@/components/organisms/screen';
+import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy } from '@/data/mock';
 import { spacing } from '@/theme';
 
-export type ProfileSetupScreenProps = Record<string, never>;
-
-export function ProfileSetupScreen(_props: ProfileSetupScreenProps) {
+export function ProfileSetupScreen() {
   const router = useRouter();
 
   return (
-    <Screen padded={false}>
-      <ScreenHeader title="" />
+    <PhoneShell>
+      <ScreenHeader title="" showProfile={false} />
       <View style={styles.body}>
         <View style={styles.hero}>
           <HeartMark size={40} />
@@ -28,13 +26,13 @@ export function ProfileSetupScreen(_props: ProfileSetupScreenProps) {
             {copy.profileSubtitle}
           </AppText>
         </View>
-        <AppInput label="Tên của bạn" placeholder="Nguyễn Văn A" />
-        <AppInput label="Người ấy sẽ gọi bạn là gì?" placeholder="Bé / Mèo con" />
+        <AppInput label={copy.profileNameLabel} placeholder={copy.profileNamePlaceholder} />
+        <AppInput label={copy.profileNickLabel} placeholder={copy.profileNickPlaceholder} />
         <View style={styles.footer}>
           <AppButton label={copy.continue} onPress={() => router.push('/connect')} />
         </View>
       </View>
-    </Screen>
+    </PhoneShell>
   );
 }
 

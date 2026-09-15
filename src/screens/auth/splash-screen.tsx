@@ -3,24 +3,22 @@ import { useRouter } from 'expo-router';
 
 import { AppText } from '@/components/atoms/app-text';
 import { HeartMark } from '@/components/atoms/heart-mark';
-import { Screen } from '@/components/organisms/screen';
+import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy } from '@/data/mock';
 import { spacing } from '@/theme';
 
-export type SplashScreenProps = Record<string, never>;
-
-export function SplashScreen(_props: SplashScreenProps) {
+export function SplashScreen() {
   const router = useRouter();
 
   return (
-    <Screen>
+    <PhoneShell>
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={copy.splashHint}
         style={styles.fill}
         onPress={() => router.push('/login')}>
         <View style={styles.hero}>
-          <HeartMark size={50} />
+          <HeartMark size={80} />
           <AppText variant="display" tone="pink" align="center">
             {copy.brand}
           </AppText>
@@ -29,7 +27,7 @@ export function SplashScreen(_props: SplashScreenProps) {
           </AppText>
         </View>
       </Pressable>
-    </Screen>
+    </PhoneShell>
   );
 }
 

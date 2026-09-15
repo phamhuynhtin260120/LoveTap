@@ -1,12 +1,12 @@
 import { Pressable, StyleSheet } from 'react-native';
-import { SymbolView, type SymbolViewProps } from 'expo-symbols';
 
+import { AppIcon, type AppIconName } from '@/components/atoms/app-icon';
 import { AppText } from '@/components/atoms/app-text';
 import { colors, radius, spacing } from '@/theme';
 
 export type SocialButtonProps = {
   readonly label: string;
-  readonly icon: Extract<SymbolViewProps['name'], object>;
+  readonly icon: AppIconName;
   readonly onPress: () => void;
 };
 
@@ -17,7 +17,7 @@ export function SocialButton({ label, icon, onPress }: SocialButtonProps) {
       accessibilityLabel={label}
       onPress={onPress}
       style={({ pressed }) => [styles.row, pressed && styles.pressed]}>
-      <SymbolView tintColor={colors.text} name={icon} size={18} />
+      <AppIcon name={icon} color={colors.text} size={18} />
       <AppText variant="bodyMedium">{label}</AppText>
     </Pressable>
   );

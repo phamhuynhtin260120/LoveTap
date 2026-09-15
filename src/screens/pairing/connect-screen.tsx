@@ -1,66 +1,90 @@
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppText } from '@/components/atoms/app-text';
-import { HeartMark } from '@/components/atoms/heart-mark';
-import { IconButton } from '@/components/atoms/icon-button';
-import { ActionCard } from '@/components/molecules/action-card';
+import { ConnectionOptionCard } from '@/components/molecules/connection-option-card';
+import { NestNote } from '@/components/molecules/nest-note';
+import { PrivacyNote } from '@/components/molecules/privacy-note';
 import { ScreenHeader } from '@/components/molecules/screen-header';
-import { Screen } from '@/components/organisms/screen';
+import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy } from '@/data/mock';
-import { spacing } from '@/theme';
+import { colors, radius, spacing } from '@/theme';
 
-export type ConnectScreenProps = Record<string, never>;
-
-export function ConnectScreen(_props: ConnectScreenProps) {
+export function ConnectScreen() {
   const router = useRouter();
 
   return (
-    <Screen padded={false}>
-      <ScreenHeader
-        title={copy.connectTitle}
-        trailing={
-          <IconButton
-            accessibilityLabel="Hồ sơ"
-            icon={{ ios: 'person', android: 'person', web: 'person' }}
-            onPress={() => router.push('/profile')}
-          />
-        }
-      />
-      <View style={styles.body}>
+    <PhoneShell>
+      <ScreenHeader title={copy.connectTitle} />
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
         <View style={styles.hero}>
-          <HeartMark size={24} />
-          <AppText variant="title" align="center">
+          <View style={styles.heartWrap}>
+            <AppText style={styles.heartGlyph}>♥</AppText>
+          </View>
+          <AppText variant="heading" align="center" style={styles.headline}>
             {copy.connectHeadline}
           </AppText>
-          <AppText variant="body" tone="secondary" align="center">
+          <AppText variant="caption" tone="secondary" align="center" style={styles.subtitle}>
             {copy.connectSubtitle}
           </AppText>
         </View>
-        <ActionCard
+        <ConnectionOptionCard
+          eyebrow={copy.createSpaceEyebrow}
           title={copy.createSpaceTitle}
           body={copy.createSpaceBody}
+          cta={copy.createSpaceCta}
+          iconGlyph="⌖"
+          badgeGlyph="⊕"
           onPress={() => router.push('/invite')}
         />
-        <ActionCard
+        <ConnectionOptionCard
+          eyebrow={copy.joinSpaceEyebrow}
           title={copy.joinSpaceTitle}
           body={copy.joinSpaceBody}
-          onPress={() => router.push('/waiting')}
+          cta={copy.joinSpaceCta}
+          iconGlyph="▦"
+          badgeGlyph="∞"
+          onPress={() => router.push('/join')}
         />
-      </View>
-    </Screen>
+        <NestNote title={copy.nestTitle} body={copy.nestBody} />
+        <PrivacyNote text={copy.privacyNote} />
+      </ScrollView>
+    </PhoneShell>
   );
 }
 
 const styles = StyleSheet.create({
-  body: {
-    flex: 1,
+  content: {
     paddingHorizontal: spacing.md,
-    gap: spacing.md,
+    paddingBottom: spacing.xxl,
+    gap: spacing.sm,
   },
   hero: {
     alignItems: 'center',
-    gap: spacing.sm,
-    paddingVertical: spacing.lg,
+    paddingTop: spacing.md,
+    paddingBottom: spacing.sm,
+    gap: spacing.xs,
+  },
+  heartWrap: {
+    width: 56,
+    height: 56,
+    borderRadius: radius.full,
+    backgroundColor: colors.heartWash,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  heartGlyph: {
+    color: colors.heart,
+    fontSize: 26,
+    lineHeight: 30,
+  },
+  headline: {
+    fontSize: 26,
+    lineHeight: 32,
+  },
+  subtitle: {
+    fontSize: 14,
+    lineHeight: 20,
+    maxWidth: 280,
   },
 });

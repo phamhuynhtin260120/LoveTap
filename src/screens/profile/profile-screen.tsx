@@ -1,35 +1,41 @@
 import { StyleSheet, View } from 'react-native';
+import { useRouter } from 'expo-router';
 
 import { AppText } from '@/components/atoms/app-text';
 import { ActionCard } from '@/components/molecules/action-card';
 import { ScreenHeader } from '@/components/molecules/screen-header';
-import { Screen } from '@/components/organisms/screen';
-import { couple, settingsGroups } from '@/data/mock';
+import { PhoneShell } from '@/components/organisms/phone-shell';
+import { copy, couple, settingsGroups } from '@/data/mock';
 import { spacing } from '@/theme';
 
-export type ProfileScreenProps = Record<string, never>;
+export function ProfileScreen() {
+  const router = useRouter();
 
-export function ProfileScreen(_props: ProfileScreenProps) {
   return (
-    <Screen padded={false}>
-      <ScreenHeader title="Cài đặt" />
+    <PhoneShell>
+      <ScreenHeader title={copy.settingsTitle} />
       <View style={styles.body}>
         <AppText variant="caption" tone="pink">
-          Phòng đôi #{couple.roomCode}
+          {copy.coupleRoom} #{couple.roomCode}
         </AppText>
         <AppText variant="heading">
           {couple.selfName} & {couple.partnerName}
         </AppText>
+        <ActionCard
+          title={copy.coupleProfile}
+          body={`${couple.daysTogether} ${copy.daysTogetherLabel}`}
+          onPress={() => router.push('/settings/couple')}
+        />
         {settingsGroups.map((group) => (
           <ActionCard
             key={group.id}
             title={group.title}
             body={group.subtitle}
-            onPress={() => undefined}
+            onPress={() => router.push(group.href)}
           />
         ))}
       </View>
-    </Screen>
+    </PhoneShell>
   );
 }
 

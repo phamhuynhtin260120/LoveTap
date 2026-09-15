@@ -1,22 +1,37 @@
 import { Pressable, StyleSheet } from 'react-native';
-import { SymbolView, type SymbolViewProps } from 'expo-symbols';
 
+import { AppIcon, type AppIconName } from '@/components/atoms/app-icon';
 import { colors, radius } from '@/theme';
 
 export type IconButtonProps = {
-  readonly icon: Extract<SymbolViewProps['name'], object>;
+  readonly name: AppIconName;
   readonly accessibilityLabel: string;
   readonly onPress?: () => void;
+  readonly variant?: 'surface' | 'plain' | 'filled' | 'outline';
 };
 
-export function IconButton({ icon, accessibilityLabel, onPress }: IconButtonProps) {
+export function IconButton({
+  name,
+  accessibilityLabel,
+  onPress,
+  variant = 'surface',
+}: IconButtonProps) {
+  const tint =
+    variant === 'filled' ? colors.textOnPrimary : variant === 'plain' ? colors.text : colors.textPink;
+
   return (
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel}
       onPress={onPress}
-      style={({ pressed }) => [styles.hit, pressed && styles.pressed]}>
-      <SymbolView tintColor={colors.textPink} name={icon} size={20} />
+      style={({ pressed }) => [
+        styles.hit,
+        variant === 'plain' && styles.plain,
+        variant === 'filled' && styles.filled,
+        variant === 'outline' && styles.outline,
+        pressed && styles.pressed,
+      ]}>
+      <AppIcon name={name} color={tint} size={18} />
     </Pressable>
   );
 }
@@ -29,6 +44,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: colors.surface,
+  },
+  plain: {
+    backgroundColor: 'transparent',
+  },
+  filled: {
+    backgroundColor: colors.avatarFill,
+  },
+  outline: {
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   pressed: {
     opacity: 0.7,

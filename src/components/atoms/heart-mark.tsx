@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
-import { SymbolView } from 'expo-symbols';
 
+import { AppText } from '@/components/atoms/app-text';
 import { colors, radius } from '@/theme';
 
 export type HeartMarkProps = {
@@ -10,11 +10,7 @@ export type HeartMarkProps = {
 export function HeartMark({ size = 28 }: HeartMarkProps) {
   return (
     <View style={[styles.wrap, { width: size + 16, height: size + 16 }]}>
-      <SymbolView
-        tintColor={colors.heart}
-        name={{ ios: 'heart.fill', android: 'favorite', web: 'favorite' }}
-        size={size}
-      />
+      <AppText style={{ color: colors.heart, fontSize: size * 0.7, lineHeight: size }}>♥</AppText>
     </View>
   );
 }
@@ -24,6 +20,6 @@ const styles = StyleSheet.create({
     borderRadius: radius.full,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.surfaceSoft,
+    backgroundColor: colors.heartWash,
   },
 });
