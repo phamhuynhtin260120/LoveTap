@@ -1,0 +1,29 @@
+import { StyleSheet, View } from 'react-native';
+import { SymbolView } from 'expo-symbols';
+
+import { colors, radius } from '@/theme';
+
+export type HeartMarkProps = {
+  readonly size?: number;
+};
+
+export function HeartMark({ size = 28 }: HeartMarkProps) {
+  return (
+    <View style={[styles.wrap, { width: size + 16, height: size + 16 }]}>
+      <SymbolView
+        tintColor={colors.heart}
+        name={{ ios: 'heart.fill', android: 'favorite', web: 'favorite' }}
+        size={size}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  wrap: {
+    borderRadius: radius.full,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.surfaceSoft,
+  },
+});

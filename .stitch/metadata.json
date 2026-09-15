@@ -1,0 +1,18 @@
+{
+  "projectId": "12434091030029404358",
+  "title": "CHẠM Mobile App Prototype",
+  "sourceUrl": "https://stitch.withgoogle.com/projects/12434091030029404358",
+  "deviceType": "MOBILE",
+  "lastSyncTime": "2026-09-15T03:45:00.000Z",
+  "screens": {
+    "02-splash": { "route": "/", "label": "02. Splash Screen" },
+    "03-login": { "route": "/login", "label": "03. Login Screen" },
+    "04-phone": { "route": "/phone", "label": "04. Phone Number" },
+    "06-profile-setup": { "route": "/profile-setup", "label": "06. Profile Setup" },
+    "07-connect": { "route": "/connect", "label": "07. Connection Method" },
+    "08-invite": { "route": "/invite", "label": "08. Create Invitation" },
+    "10-waiting": { "route": "/waiting", "label": "10. Waiting for partner" },
+    "12-home": { "route": "/home", "label": "12. Main Home / Chạm" },
+    "profile": { "route": "/profile", "label": "Settings shell (screens 29–35)" }
+  }
+}
