@@ -19,6 +19,22 @@ export const colors = {
   heart: '#EE7A86',
   splashDark: '#111111',
   online: '#E07A7A',
+  avatarFill: '#8E4A51',
+  heartWash: '#F8D5D8',
+  iconWash: '#F4D0D4',
+  nestWash: '#F8E6E2',
+  privacyWash: '#F9E4E2',
+  photoPeach: '#E8A090',
+  photoRose: '#D97B7B',
+  heroStart: '#F6B8B2',
+  heroEnd: '#E88782',
+  heroChip: 'rgba(255, 255, 255, 0.28)',
+  heroMuted: 'rgba(255, 255, 255, 0.86)',
+  statusPill: '#F8E0E0',
+  createTap: '#F4D0D4',
+  createTapInk: '#C45C6A',
+  tileWash: '#F8E6E6',
+  photoHighlight: '#F3C2B4',
 } as const;
 
 export const spacing = {

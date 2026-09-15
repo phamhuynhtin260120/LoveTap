@@ -5,7 +5,7 @@ export const couple = {
   partnerNickname: 'Bé',
   partnerFullName: 'Minh Triết',
   distanceLabel: '12 km',
-  statusLine: 'Anh đang ở đây · Vừa mới ủng hộ 3 phút trước',
+  statusLine: 'Anh đang ở đây · Vừa mở ứng dụng 3 phút trước',
 } as const;
 
 export const copy = {
@@ -26,11 +26,18 @@ export const copy = {
   profileSubtitle: 'Hãy cho CHẠM biết một chút về bạn nhé',
   connectTitle: 'Cài Đặt Kết Nối',
   connectHeadline: 'Kết nối với người ấy',
-  connectSubtitle: 'Chỉ hai bạn có thể vào không gian này. Hãy chọn phương thức kết nối.',
+  connectSubtitle: 'Chỉ hai bạn có thể vào không gian này.\nHãy chọn phương thức bắt đầu:',
+  createSpaceEyebrow: 'Khuyên dùng nếu bạn là người tạo trước',
   createSpaceTitle: 'Tạo không gian mới',
-  createSpaceBody: 'Tạo mã lời mời rồi gửi cho người ấy để bắt đầu điều này.',
+  createSpaceBody: 'Tạo mã lời mời bí mật và gửi cho người ấy để bắt đầu kết nối.',
+  createSpaceCta: 'Khởi tạo mã tức thì',
+  joinSpaceEyebrow: 'Nếu người ấy đã tạo mã',
   joinSpaceTitle: 'Tham gia bằng mã',
-  joinSpaceBody: 'Nhập mã số kết nối hoặc quét QR do đối phương chia sẻ.',
+  joinSpaceBody: 'Nhập mã số kết nối hoặc quét mã QR do đối phương chia sẻ.',
+  joinSpaceCta: 'Nhập mã 6 chữ số / Quét QR',
+  nestTitle: 'Cùng xây tổ ấm số',
+  nestBody: 'Mọi kỷ niệm, vị trí và cảm xúc sẽ được lưu giữ vẹn nguyên chỉ giữa hai người.',
+  privacyNote: 'Không gian hoàn toàn riêng tư. Mã hóa đầu cuối giữa hai thiết bị.',
   inviteHeadline: 'Mời người ấy',
   inviteSubtitle: 'Gửi mã kết nối này hoặc để người ấy đến mã không gian chung của hai bạn.',
   coupleCodeLabel: 'MÃ KẾT NỐI CỦA HAI BẠN',
@@ -39,18 +46,50 @@ export const copy = {
   showQr: 'Hiển thị mã QR để quét trực tiếp',
   waitingHeadline: 'Đang chờ người ấy',
   waitingSubtitle: 'Người ấy sẽ thấy mã này và bước vào không gian chung cùng lúc với bạn.',
+  homeEyebrow: 'Kết nối đồng điệu',
   homeGreeting: 'Chào buổi sáng, Bé',
+  homeHeroChip: 'Chạm yêu thương tức thì',
   homeHeroTitle: 'Em nhớ anh',
   homeHeroBody: 'Chạm một cái để gửi ngay tín hiệu yêu thương',
-  homeHeroHint: 'Nhấn để truyền một rung hoàc',
+  homeHeroHint: 'Nhấn để truyền nhịp rung haptic',
   quickActionsLabel: 'CÁI CHẠM NHANH',
+  quickActionsLink: 'Gửi chỉ với 1 chạm',
+  createTap: 'Tạo cái chạm mới',
+  recentTapsLabel: 'NHỊP CHẠM GẦN NHẤT',
+  recentTapsLink: 'Xem tất cả',
+  anniversaryLabel: 'KỶ NIỆM',
+  anniversaryTitle: 'Kỷ niệm 428 ngày bên nhau',
+  anniversaryQuote: '“Mỗi nhịp chạm là một lần nhớ”',
+  anniversaryCaption: 'Hôm nay anh và bạn đã 14 cái chạm',
+  tabHome: 'Chạm',
+  tabMoments: 'Khoảnh khắc',
+  tabTogether: 'Hai đứa',
 } as const;
 
 export const quickActions = [
-  { id: 'work', title: 'Em đi làm nhé', subtitle: 'Chúc anh ngày mới' },
-  { id: 'home', title: 'Em về rồi', subtitle: 'Mở cửa đón em toàn' },
-  { id: 'hug', title: 'Ôm em nhé', subtitle: 'Gửi một ôm dịu dàng' },
-  { id: 'call', title: 'Gọi em nha', subtitle: 'Khi nào anh rảnh nhé' },
+  { id: 'work', title: 'Em đi làm nhé', subtitle: 'Chúc anh ngày vui vẻ', iconGlyph: '▣' },
+  { id: 'home', title: 'Em về rồi', subtitle: 'Về đến tổ ấm an toàn', iconGlyph: '⌂' },
+  { id: 'hug', title: 'Ôm em nhé', subtitle: 'Cần chút dịu dàng', iconGlyph: '♡' },
+  { id: 'call', title: 'Gọi em nha', subtitle: 'Khi nào anh rảnh nhé', iconGlyph: '☎' },
+] as const;
+
+export const recentTaps = [
+  {
+    id: 'hug',
+    actor: 'Anh vừa gửi:',
+    title: 'Ôm em nhé',
+    time: '15 phút trước',
+    status: '♥ Đã đáp lại',
+    incoming: true,
+  },
+  {
+    id: 'miss',
+    actor: 'Bạn đã gửi:',
+    title: 'Em nhớ anh ♥',
+    time: 'Sáng nay · 07:45',
+    status: 'Minh Triết đã nhận',
+    incoming: false,
+  },
 ] as const;
 
 export const settingsGroups = [

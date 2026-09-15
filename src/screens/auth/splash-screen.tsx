@@ -20,7 +20,7 @@ export function SplashScreen(_props: SplashScreenProps) {
         style={styles.fill}
         onPress={() => router.push('/login')}>
         <View style={styles.hero}>
-          <HeartMark size={50} />
+          <HeartMark size={80} />
           <AppText variant="display" tone="pink" align="center">
             {copy.brand}
           </AppText>
