@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     flexBasis: '47%',
     maxWidth: '48.5%',
-    minHeight: 118,
+    minHeight: 108,
     backgroundColor: colors.tileWash,
     borderRadius: radius.lg,
     padding: spacing.md,

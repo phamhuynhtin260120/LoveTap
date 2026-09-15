@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import { SymbolView } from 'expo-symbols';
 
 import { AppText } from '@/components/atoms/app-text';
@@ -30,15 +31,13 @@ export type AppIconProps = {
 
 export function AppIcon({ name, color, size = 22 }: AppIconProps) {
   const icon = catalog[name];
-
-  return (
-    <SymbolView
-      tintColor={color}
-      size={size}
-      name={{ ios: icon.ios }}
-      fallback={
-        <AppText style={{ color, fontSize: size - 4, lineHeight: size }}>{icon.fallback}</AppText>
-      }
-    />
+  const glyph = (
+    <AppText style={{ color, fontSize: size - 4, lineHeight: size }}>{icon.fallback}</AppText>
   );
+
+  if (Platform.OS !== 'ios') {
+    return glyph;
+  }
+
+  return <SymbolView tintColor={color} size={size} name={{ ios: icon.ios }} fallback={glyph} />;
 }

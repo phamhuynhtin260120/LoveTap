@@ -13,7 +13,7 @@ export function ProfileScreen() {
 
   return (
     <PhoneShell>
-      <ScreenHeader title={copy.settingsTitle} />
+      <ScreenHeader title={copy.settingsTitle} showProfile={false} />
       <View style={styles.body}>
         <AppText variant="caption" tone="pink">
           {copy.coupleRoom} #{couple.roomCode}

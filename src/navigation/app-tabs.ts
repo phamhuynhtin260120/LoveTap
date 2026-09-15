@@ -16,3 +16,5 @@ export const APP_TABS: readonly AppTabConfig[] = [
   { name: 'moments', label: copy.tabMoments, icon: 'grid', iconActive: 'gridFill' },
   { name: 'together', label: copy.tabTogether, icon: 'heart', iconActive: 'heartFill' },
 ];
+
+export const TAB_BAR_INSET = 64;

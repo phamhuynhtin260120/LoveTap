@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
     borderRadius: radius.xl,
     paddingHorizontal: spacing.md,
     paddingTop: spacing.md,
-    paddingBottom: spacing.lg,
+    paddingBottom: spacing.md,
     alignItems: 'center',
     overflow: 'hidden',
-    minHeight: 248,
+    minHeight: 220,
   },
   pressed: {
     opacity: 0.92,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.heroChip,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: spacing.md,
+    marginTop: spacing.sm,
     marginBottom: spacing.sm,
   },
   heart: {

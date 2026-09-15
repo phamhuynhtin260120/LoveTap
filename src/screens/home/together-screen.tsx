@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { AppText } from '@/components/atoms/app-text';
 import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy, couple } from '@/data/mock';
+import { TAB_BAR_INSET } from '@/navigation/app-tabs';
 import { colors, radius, spacing } from '@/theme';
 
 export function TogetherScreen() {
@@ -44,6 +45,7 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     padding: spacing.xl,
+    paddingBottom: TAB_BAR_INSET,
     gap: spacing.md,
     justifyContent: 'center',
   },

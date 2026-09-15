@@ -5,6 +5,7 @@ import { AppText } from '@/components/atoms/app-text';
 import { MemoryCard } from '@/components/molecules/memory-card';
 import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy, moments } from '@/data/mock';
+import { TAB_BAR_INSET } from '@/navigation/app-tabs';
 import { spacing } from '@/theme';
 
 export function MomentsScreen() {
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
   },
   body: {
     padding: spacing.md,
+    paddingBottom: TAB_BAR_INSET,
     gap: spacing.sm,
   },
 });

@@ -12,6 +12,7 @@ import { StatusPill } from '@/components/molecules/status-pill';
 import { TapHero } from '@/components/molecules/tap-hero';
 import { PhoneShell } from '@/components/organisms/phone-shell';
 import { copy, couple, quickActions, recentTaps } from '@/data/mock';
+import { TAB_BAR_INSET } from '@/navigation/app-tabs';
 import { colors, radius, spacing } from '@/theme';
 
 export function HomeScreen() {
@@ -125,7 +126,7 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingHorizontal: spacing.md,
-    paddingBottom: spacing.md,
+    paddingBottom: TAB_BAR_INSET,
     gap: spacing.md,
   },
   greetingRow: {
