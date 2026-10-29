@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHẠM - Profile Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#fdd8ed",
+                      "surface": "#fff8f9",
+                      "surface-container": "#ffe8f3",
+                      "secondary-fixed-dim": "#f9b5b5",
+                      "surface-tint": "#a13d3f",
+                      "on-primary-fixed-variant": "#82252a",
+                      "on-secondary-fixed": "#350f11",
+                      "on-primary-fixed": "#410007",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#ffb3b1",
+                      "surface-container-high": "#ffe0f1",
+                      "on-surface-variant": "#564241",
+                      "primary-container": "#f47c7c",
+                      "tertiary-fixed": "#eaddff",
+                      "on-primary-container": "#6c151c",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#a899c4",
+                      "on-secondary-container": "#7b4849",
+                      "background": "#fff8f9",
+                      "on-tertiary-fixed": "#201538",
+                      "on-secondary-fixed-variant": "#69393a",
+                      "surface-bright": "#fff8f9",
+                      "on-tertiary-fixed-variant": "#4d4066",
+                      "surface-dim": "#f4d0e5",
+                      "primary-fixed-dim": "#ffb3b1",
+                      "secondary-container": "#ffbbbb",
+                      "surface-container-highest": "#fdd8ed",
+                      "tertiary": "#65587f",
+                      "secondary": "#855051",
+                      "on-background": "#2a1423",
+                      "surface-container-low": "#fff0f6",
+                      "tertiary-fixed-dim": "#cfbfec",
+                      "on-secondary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#dcc0bf",
+                      "primary-fixed": "#ffdad8",
+                      "on-surface": "#2a1423",
+                      "outline": "#897170",
+                      "secondary-fixed": "#ffdad9",
+                      "on-tertiary-container": "#3c3155",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffecf5",
+                      "primary": "#a13d3f",
+                      "inverse-surface": "#412939"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "card_radius": "24px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "lg": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "40px",
+                      "md": "16px",
+                      "gutter": "16px",
+                      "xl": "32px",
+                      "unit": "4px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Quicksand"
+                      ],
+                      "body-lg": [
+                              "Quicksand"
+                      ],
+                      "label-md": [
+                              "Quicksand"
+                      ],
+                      "headline-md": [
+                              "Quicksand"
+                      ],
+                      "display": [
+                              "Quicksand"
+                      ],
+                      "body-md": [
+                              "Quicksand"
+                      ],
+                      "headline-lg": [
+                              "Quicksand"
+                      ],
+                      "headline-lg-mobile": [
+                              "Quicksand"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Input Glow Focus */
+        input:focus {
+            outline: none;
+            border-color: #F47C7C !important;
+            box-shadow: 0 0 0 4px rgba(244, 124, 124, 0.1) !important;
+        }
+
+        /* Pillowy Button Gradient */
+        .btn-pillowy {
+            background: linear-gradient(180deg, #F47C7C 0%, #F8B4B4 100%);
+            box-shadow: 0 4px 12px rgba(69, 45, 61, 0.08);
+            transition: all 0.2s ease;
+        }
+        .btn-pillowy:active {
+            box-shadow: inset 0 2px 4px rgba(69, 45, 61, 0.1);
+            transform: translateY(1px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation for Setup (Linear Flow, Back Button Only) -->
+<header class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full z-50 sticky top-0 bg-background/80 backdrop-blur-md">
+<button aria-label="Back" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-200 p-2 -ml-2 rounded-full">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<!-- Title omitted for cleaner linear flow, optional step indicator could go here -->
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-md mx-auto px-margin-mobile md:px-margin-desktop pt-xl pb-24 flex flex-col items-center">
+<!-- Header Text -->
+<div class="text-center mb-xl w-full">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-sm">
+                Về bạn
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Hãy cho CHẠM biết một chút về bạn nhé.
+            </p>
+</div>
+<!-- Avatar Picker -->
+<div class="relative mb-xl group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container border-4 border-surface-container-lowest shadow-[0_8px_24px_rgba(69,45,61,0.06)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-active:scale-95">
+<!-- Placeholder Image -->
+<img alt="Avatar Preview" class="w-full h-full object-cover opacity-50" data-alt="A soft, aesthetically pleasing default avatar placeholder illustration. Features abstract, warm organic shapes in pastel coral and soft lavender tones against a creamy ivory background. The style is modern, minimalist, and emotional, reflecting a calm and intimate atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfp3MKVYe4WfrD6kGICTzvXTpxh88MN-W4gxIJjOrywCdDdwNQEozCERs28s0bfjcOoSJkQV-TtqZE6Ej6s76rwz6zAYqwLBVnhA2WAuGgA74VFaJzVMb_m_hJWIg8zMSTne5l2Jg50W_eVqjhP9WPcDc0eNYhHKP5-RqOcSE7OKgsZz_yyavazI5cuRPm4SMyKcMftJAn2wtXUA86qLc_-5EQsqSMG2WGUfQrcgHnXiaiU7S4qtVjlQ"/>
+<!-- Overlay Icon -->
+<div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="material-symbols-outlined text-on-primary text-3xl icon-fill drop-shadow-md">add_a_photo</span>
+</div>
+</div>
+<!-- Floating Add Icon -->
+<button class="absolute bottom-0 right-0 w-10 h-10 bg-primary-container text-on-primary rounded-full shadow-md flex items-center justify-center hover:bg-primary-container/90 transition-colors">
+<span class="material-symbols-outlined text-xl">camera_alt</span>
+</button>
+</div>
+<!-- Form Fields -->
+<div class="w-full space-y-lg">
+<!-- Field 1 -->
+<div class="flex flex-col space-y-sm">
+<label class="font-label-md text-label-md text-on-surface-variant px-1" for="name">
+                    Tên của bạn
+                </label>
+<div class="relative">
+<input class="w-full bg-[#FFFDFC] border border-[#FFD7C2] rounded-xl px-md py-3 font-body-lg text-body-lg text-on-surface placeholder-on-surface-variant/40 transition-all duration-200" id="name" placeholder="Ví dụ: Nguyễn Văn A" type="text"/>
+</div>
+</div>
+<!-- Field 2 -->
+<div class="flex flex-col space-y-sm">
+<label class="font-label-md text-label-md text-on-surface-variant px-1" for="nickname">
+                    Người ấy sẽ gọi bạn là gì?
+                </label>
+<div class="relative">
+<input class="w-full bg-[#FFFDFC] border border-[#FFD7C2] rounded-xl px-md py-3 font-body-lg text-body-lg text-on-surface placeholder-on-surface-variant/40 transition-all duration-200" id="nickname" placeholder="Ví dụ: Mèo con" type="text"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/70 px-1 mt-1">
+                    Tên này sẽ hiển thị trên màn hình của người ấy.
+                </p>
+</div>
+</div>
+<!-- Action Button Fixed at Bottom -->
+<div class="fixed bottom-0 left-0 w-full p-margin-mobile bg-gradient-to-t from-background via-background/90 to-transparent z-40 flex justify-center pb-8">
+<button class="w-full max-w-md btn-pillowy text-on-primary font-label-md text-label-md py-4 rounded-full flex items-center justify-center space-x-2">
+<span>Tiếp tục</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</main>
+</body></html>

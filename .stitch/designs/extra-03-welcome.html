@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHẠM - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#fdd8ed",
+                        "surface": "#fff8f9",
+                        "surface-container": "#ffe8f3",
+                        "secondary-fixed-dim": "#f9b5b5",
+                        "surface-tint": "#a13d3f",
+                        "on-primary-fixed-variant": "#82252a",
+                        "on-secondary-fixed": "#350f11",
+                        "on-primary-fixed": "#410007",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb3b1",
+                        "surface-container-high": "#ffe0f1",
+                        "on-surface-variant": "#564241",
+                        "primary-container": "#f47c7c",
+                        "tertiary-fixed": "#eaddff",
+                        "on-primary-container": "#6c151c",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#a899c4",
+                        "on-secondary-container": "#7b4849",
+                        "background": "#fff8f9",
+                        "on-tertiary-fixed": "#201538",
+                        "on-secondary-fixed-variant": "#69393a",
+                        "surface-bright": "#fff8f9",
+                        "on-tertiary-fixed-variant": "#4d4066",
+                        "surface-dim": "#f4d0e5",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "secondary-container": "#ffbbbb",
+                        "surface-container-highest": "#fdd8ed",
+                        "tertiary": "#65587f",
+                        "secondary": "#855051",
+                        "on-background": "#2a1423",
+                        "surface-container-low": "#fff0f6",
+                        "tertiary-fixed-dim": "#cfbfec",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#dcc0bf",
+                        "primary-fixed": "#ffdad8",
+                        "on-surface": "#2a1423",
+                        "outline": "#897170",
+                        "secondary-fixed": "#ffdad9",
+                        "on-tertiary-container": "#3c3155",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ffecf5",
+                        "primary": "#a13d3f",
+                        "inverse-surface": "#412939"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "lg": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px",
+                        "md": "16px",
+                        "gutter": "16px",
+                        "xl": "32px",
+                        "unit": "4px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Quicksand"],
+                        "body-lg": ["Quicksand"],
+                        "label-md": ["Quicksand"],
+                        "headline-md": ["Quicksand"],
+                        "display": ["Quicksand"],
+                        "body-md": ["Quicksand"],
+                        "headline-lg": ["Quicksand"],
+                        "headline-lg-mobile": ["Quicksand"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #FFFDFC; /* Soft Surface override as requested */
+            color: #2a1423; /* on-background */
+        }
+        .btn-primary {
+            background: linear-gradient(to bottom, #F47C7C, #F8B4B4);
+            box-shadow: 0 8px 24px rgba(69, 45, 61, 0.06);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:active {
+            box-shadow: inset 0 2px 4px rgba(69, 45, 61, 0.1);
+            transform: translateY(2px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col items-center justify-between p-margin-mobile md:p-margin-desktop antialiased selection:bg-surface-variant selection:text-on-background relative overflow-hidden">
+<!-- Background Decor (Soft Ambient) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center opacity-30">
+<div class="w-[120%] h-[120%] rounded-full bg-surface-dim blur-[100px] transform translate-y-1/4"></div>
+</div>
+<!-- Main Content Container -->
+<main class="flex-1 w-full max-w-md mx-auto flex flex-col justify-center items-center z-10 space-y-xl py-xl">
+<!-- Brand Logo (TopAppBar JSON Reference for Brand Style) -->
+<h1 class="font-display text-display text-primary tracking-tight mb-8">CHẠM</h1>
+<!-- Illustration -->
+<div class="w-full aspect-square relative rounded-full overflow-hidden flex items-center justify-center mb-8">
+<img class="object-cover w-full h-full mix-blend-multiply opacity-90 transition-opacity duration-1000 ease-in-out hover:opacity-100" data-alt="An emotionally minimalist illustration showing two abstract human hands gently reaching towards each other, or soft intertwining fluid lines. The style should be airy, warm, and vector-like, utilizing a very soft ivory background with subtle coral and deep plum line art. The overall feeling is tender, intimate, and deeply calming, embodying soft emotional minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEsa0TEXs1R9FO-TgV-Yn_rDf6yz6jl0gRcC8R7hog5pqzw5iWS82yfPNtKXMLACfwEsVWT1QfhffbQBhRbZW77cYp2IXFOV8bAhvapxAAbiI2eBEJQF_NXP4NOHgq0MT1lHzzxTCLJl55fg1wbYlROGMS04Dk-CXhGZpSFWZ8RFF9ocGwca8I-sdlwwr_1R00TxVqkrEd7gIPVJP0SDHQQYv_m8j0yuEoZfl311YoFBrdkju2pe6gEg"/>
+</div>
+<!-- Copywriter -->
+<div class="text-center space-y-md w-full px-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Một cái chạm cũng có thể nói rất nhiều</h2>
+<p class="font-body-md text-body-md text-on-surface-variant/80">Khơi dậy cảm xúc và kết nối sâu sắc hơn với người bạn thương.</p>
+</div>
+</main>
+<!-- Actions (Bottom anchored for easy thumb reach) -->
+<footer class="w-full max-w-md mx-auto flex flex-col items-center space-y-lg z-10 pb-lg">
+<button class="btn-primary w-full h-14 rounded-full font-label-md text-label-md text-white flex items-center justify-center">
+            Bắt đầu
+        </button>
+<button class="font-label-md text-label-md text-on-surface-variant/60 hover:text-primary transition-colors">
+            Tôi đã có tài khoản
+        </button>
+</footer>
+</body></html>

@@ -1,0 +1,222 @@
+{
+  "project": "12434091030029404358",
+  "exportedAt": "2026-10-20T15:58:24.331Z",
+  "screens": {
+    "02-splash": {
+      "title": "02. Splash Screen - Fixed Version",
+      "id": "107c64c267144b0a817ea159db902ad6",
+      "width": "780",
+      "height": "1768"
+    },
+    "03-login": {
+      "title": "03. Login Screen",
+      "id": "788c12df891149fe936881962c70c412",
+      "width": "780",
+      "height": "1768"
+    },
+    "04-phone": {
+      "title": "04. Phone Number Screen",
+      "id": "3c833cf245be4e85a14f2166a2e5c251",
+      "width": "780",
+      "height": "1768"
+    },
+    "05-otp": {
+      "title": "05. OTP Verification",
+      "id": "45e099a828f74c888710c02ddaff8ce8",
+      "width": "858",
+      "height": "1944"
+    },
+    "06-profile-setup": {
+      "title": "06. Profile Setup",
+      "id": "5f69df29306f409fa0480eb10026f77e",
+      "width": "780",
+      "height": "1768"
+    },
+    "07-connect": {
+      "title": "07 — Connection Method",
+      "id": "59d55ad550da4c4bb52067a0294c15fa",
+      "width": "780",
+      "height": "1936"
+    },
+    "08-invite": {
+      "title": "08 — Create Invitation",
+      "id": "ceafee340aef4ac88d2facbf31f8048e",
+      "width": "780",
+      "height": "1862"
+    },
+    "09-join": {
+      "title": "09. Enter invitation code",
+      "id": "d4dd404b978a424da692c0cb67a291a8",
+      "width": "780",
+      "height": "1768"
+    },
+    "10-waiting": {
+      "title": "10 — Waiting for Partner",
+      "id": "9d3c95efcc8a40fa997af5693f70dbfc",
+      "width": "780",
+      "height": "1874"
+    },
+    "11-connected": {
+      "title": "11. Connection Success",
+      "id": "827e124a24404ad8bb50be8823f8bdb9",
+      "width": "782",
+      "height": "1768"
+    },
+    "12-home": {
+      "title": "12 — Main Home / Chạm (Official)",
+      "id": "343bc344dc4f45458dc686beeefa0f9b",
+      "width": "780",
+      "height": "2724"
+    },
+    "13-sending": {
+      "title": "13 — Sending State",
+      "id": "470fda4b1893450095fcdb09c0d1495f",
+      "width": "780",
+      "height": "1992"
+    },
+    "15-delivered": {
+      "title": "15 — Delivered State",
+      "id": "f650bf55b4d54c0caa85d22f7b2c3510",
+      "width": "780",
+      "height": "2168"
+    },
+    "16-seen": {
+      "title": "16 — Seen State",
+      "id": "0e3e04c6629849618a420c0b336b3f7e",
+      "width": "780",
+      "height": "2124"
+    },
+    "17-send-failure": {
+      "title": "17 — Send Failure",
+      "id": "dc05b70e98054f4b902535991a4859e2",
+      "width": "780",
+      "height": "1982"
+    },
+    "18-tap-create": {
+      "title": "18 — Create New Tap",
+      "id": "0aa9c84dde054284bbf749f5a471b959",
+      "width": "780",
+      "height": "2648"
+    },
+    "19-tap-library": {
+      "title": "19 — Suggested Tap Library",
+      "id": "3f33e64f95584fdcb85bab5133cd52c9",
+      "width": "780",
+      "height": "3008"
+    },
+    "20-tap-edit": {
+      "title": "20 — Edit Tap",
+      "id": "368ca24596e849bbae380c2ea69f758c",
+      "width": "780",
+      "height": "2256"
+    },
+    "21-manage-taps": {
+      "title": "21 — Arrange & Manage Taps",
+      "id": "6bb7781b3acc4592aae5955673a97cc7",
+      "width": "780",
+      "height": "2492"
+    },
+    "22-moments": {
+      "title": "13. Khoảnh khắc - Moments Timeline",
+      "id": "ececab75ff1f4007bc0b3784b23b7fc2",
+      "width": "780",
+      "height": "3710"
+    },
+    "23-moment-detail": {
+      "title": "23 — Moment Detail",
+      "id": "39bcb5e8a36341bbb1344ddae8e0021c",
+      "width": "780",
+      "height": "2756"
+    },
+    "24-moment-add": {
+      "title": "24 — Add a Moment",
+      "id": "6a1843f07e9b4ef99e7d76cfa89abb19",
+      "width": "780",
+      "height": "2278"
+    },
+    "25-moments-empty": {
+      "title": "25 — Empty Moments",
+      "id": "508976cf2ea144c98e56bfaf819a03ff",
+      "width": "780",
+      "height": "2140"
+    },
+    "26-together": {
+      "title": "15. Hai Đứa - Vivid Bucket List Variant",
+      "id": "b962547b714e47bcb1a76973f6703df1",
+      "width": "780",
+      "height": "3296"
+    },
+    "27-together-setup": {
+      "title": "16. Thiết lập Hai Đứa - Enhanced Setup",
+      "id": "a26b311d3de047b19d0164fe6ca1481e",
+      "width": "780",
+      "height": "2860"
+    },
+    "28-emotional-status": {
+      "title": "28 — Emotional Status",
+      "id": "34c0c0f752934c1688d669b5f2f73f8e",
+      "width": "780",
+      "height": "3108"
+    },
+    "29-settings": {
+      "title": "29 — Settings & Preferences",
+      "id": "f0df5c7668e04e46a19678e553a6c1a5",
+      "width": "780",
+      "height": "3658"
+    },
+    "30-notifications": {
+      "title": "30 — Notification & Quiet Hours",
+      "id": "6c71a8d5affc4be580624f17b17818ac",
+      "width": "780",
+      "height": "3896"
+    },
+    "31-appearance": {
+      "title": "31 — Appearance & Themes",
+      "id": "f0ee7e44b46f41398e80eaa39ca89094",
+      "width": "780",
+      "height": "3606"
+    },
+    "32-privacy": {
+      "title": "32 — Privacy & Security",
+      "id": "1883e6a237cf49339f820f7d787004a1",
+      "width": "780",
+      "height": "3088"
+    },
+    "33-pause": {
+      "title": "33 — Pause Connection",
+      "id": "1e7e2169927a437e98ec2e9cd3e9a514",
+      "width": "780",
+      "height": "3670"
+    },
+    "34-unpair": {
+      "title": "34 — Unpair Confirmation",
+      "id": "48ba7a08e81949b68feaa7a51bcd3b77",
+      "width": "780",
+      "height": "4050"
+    },
+    "35-safety": {
+      "title": "35 — Block & Safety Report",
+      "id": "df1ee3bd9cee4fdf970ee1054b27638c",
+      "width": "780",
+      "height": "5706"
+    },
+    "extra-03-welcome": {
+      "title": "03. Welcome Screen",
+      "id": "de3175187b94405f86a92f32bb465cc7",
+      "width": "780",
+      "height": "1768"
+    },
+    "ref-logo": {
+      "title": "CHẠM Logo",
+      "id": "766c67f36a60443298cd5c5b26453e83",
+      "width": "1024",
+      "height": "1024"
+    },
+    "ref-toasts": {
+      "title": "Hệ thống thông báo & Toasts",
+      "id": "2d61199ceee145858427402120afe4ad",
+      "width": "780",
+      "height": "2816"
+    }
+  }
+}

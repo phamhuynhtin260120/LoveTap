@@ -127,7 +127,7 @@ export function HomeScreen(_props: HomeScreenProps) {
 
 const styles = StyleSheet.create({
   screen: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.legacyBackground,
   },
   phone: {
     flex: 1,

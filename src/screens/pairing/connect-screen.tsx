@@ -1,146 +1,280 @@
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { AppText } from '@/components/atoms/app-text';
-import { IconButton } from '@/components/atoms/icon-button';
-import { ConnectionOptionCard } from '@/components/molecules/connection-option-card';
-import { NestNote } from '@/components/molecules/nest-note';
-import { PrivacyNote } from '@/components/molecules/privacy-note';
-import { Screen } from '@/components/organisms/screen';
-import { copy } from '@/data/mock';
-import { colors, radius, spacing } from '@/theme';
+import { AppText, type ColorToken } from '@/components/atoms/app-text';
+import { Icon } from '@/components/atoms/icon';
+import { PairingHeader } from '@/components/molecules/pairing-header';
+import { pairingCopy } from '@/data/copy';
+import { colors, corner, elevation } from '@/theme';
+
+const copy = pairingCopy.connect;
 
 export type ConnectScreenProps = Record<string, never>;
 
+/** 07 — Connection Method. */
 export function ConnectScreen(_props: ConnectScreenProps) {
   const router = useRouter();
 
   return (
-    <Screen padded={false} style={styles.screen}>
-      <View style={styles.phone}>
-        <View style={styles.header}>
-        <IconButton
-          variant="plain"
-          fallback="‹"
-          accessibilityLabel="Quay lại"
-          icon={{ ios: 'chevron.left' }}
-          onPress={() => router.back()}
-        />
-        <AppText variant="label" style={styles.headerTitle}>
-          {copy.connectTitle}
-        </AppText>
-        <IconButton
-          variant="filled"
-          fallback="☺"
-          accessibilityLabel="Hồ sơ"
-          icon={{ ios: 'person.fill' }}
-          onPress={() => router.push('/profile')}
-        />
-      </View>
-
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.content}>
-        <View style={styles.hero}>
-          <View style={styles.heartWrap}>
-            <AppText style={styles.heartGlyph} accessibilityLabel="Trái tim">
-              ♥
-            </AppText>
+    <SafeAreaView style={styles.safe} edges={['top']}>
+      <PairingHeader title={pairingCopy.headerTitle} />
+      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <View style={styles.intro}>
+          <View style={styles.heart}>
+            <Icon name="favorite" filled size={28} color="primary" />
           </View>
-          <AppText variant="heading" align="center" style={styles.headline}>
-            {copy.connectHeadline}
+          <AppText variant="headlineLgMobile" color="onSurface" align="center" style={styles.introTitle}>
+            {copy.title}
           </AppText>
-          <AppText variant="caption" tone="secondary" align="center" style={styles.subtitle}>
-            {copy.connectSubtitle}
+          <AppText variant="bodyMd" color="onSurfaceVariant" align="center" style={styles.introBody}>
+            {copy.subtitle}
           </AppText>
         </View>
 
-        <ConnectionOptionCard
-          eyebrow={copy.createSpaceEyebrow}
-          title={copy.createSpaceTitle}
-          body={copy.createSpaceBody}
-          cta={copy.createSpaceCta}
-          iconGlyph="⌖"
-          badgeGlyph="⊕"
-          onPress={() => router.push('/invite')}
-        />
+        <View style={styles.cards}>
+          <OptionCard
+            chip={copy.createChip}
+            chipBackground={colors.surfaceContainer}
+            chipColor="primary"
+            cornerIcon="add_circle"
+            cornerColor="primary"
+            icon="share_location"
+            iconBackground="rgba(255, 187, 187, 0.5)"
+            title={copy.createTitle}
+            body={copy.createBody}
+            cta={copy.createCta}
+            ctaColor="primary"
+            onPress={() => router.push('/invite')}
+          />
+          <OptionCard
+            chip={copy.joinChip}
+            chipBackground={colors.secondaryFixed}
+            chipColor="onSecondaryFixed"
+            cornerIcon="key"
+            cornerColor="secondary"
+            icon="qr_code_scanner"
+            iconBackground={colors.surfaceContainer}
+            title={copy.joinTitle}
+            body={copy.joinBody}
+            cta={copy.joinCta}
+            ctaColor="secondary"
+            onPress={() => router.push('/join')}
+          />
+        </View>
 
-        <ConnectionOptionCard
-          eyebrow={copy.joinSpaceEyebrow}
-          title={copy.joinSpaceTitle}
-          body={copy.joinSpaceBody}
-          cta={copy.joinSpaceCta}
-          iconGlyph="▦"
-          badgeGlyph="∞"
-          onPress={() => router.push('/waiting')}
-        />
+        <View style={styles.nest}>
+          <Image source={require('@/assets/images/mock/nest.png')} style={styles.nestImage} contentFit="cover" />
+          <View style={styles.flexShrink}>
+            <AppText variant="labelMd" color="primary">
+              {copy.nestTitle}
+            </AppText>
+            <AppText variant="labelSm" color="onSurfaceVariant" numberOfLines={2} style={styles.nestBody}>
+              {copy.nestBody}
+            </AppText>
+          </View>
+        </View>
 
-        <NestNote title={copy.nestTitle} body={copy.nestBody} />
-        <PrivacyNote text={copy.privacyNote} />
-        </ScrollView>
+        <View style={styles.security}>
+          <View style={styles.securityIcon}>
+            <Icon name="verified_user" filled size={20} color="primary" />
+          </View>
+          <AppText variant="labelSm" color="onSurfaceVariant" style={styles.securityText}>
+            {copy.privacy}
+          </AppText>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+type OptionCardProps = {
+  readonly chip: string;
+  readonly chipBackground: string;
+  readonly chipColor: ColorToken;
+  readonly cornerIcon: string;
+  readonly cornerColor: ColorToken;
+  readonly icon: string;
+  readonly iconBackground: string;
+  readonly title: string;
+  readonly body: string;
+  readonly cta: string;
+  readonly ctaColor: ColorToken;
+  readonly onPress: () => void;
+};
+
+function OptionCard(props: OptionCardProps) {
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={props.title}
+      onPress={props.onPress}
+      style={({ pressed }) => [styles.card, pressed && styles.pressed]}>
+      <View style={styles.cardTop}>
+        <View style={[styles.chip, { backgroundColor: props.chipBackground }]}>
+          <AppText variant="labelSm" color={props.chipColor}>
+            {props.chip}
+          </AppText>
+        </View>
+        <View style={styles.cornerIcon}>
+          <Icon name={props.cornerIcon} size={18} color={props.cornerColor} />
+        </View>
       </View>
-    </Screen>
+
+      <View style={styles.cardMiddle}>
+        <View style={[styles.cardIcon, { backgroundColor: props.iconBackground }]}>
+          <Icon name={props.icon} filled size={30} color="primary" />
+        </View>
+        <View style={styles.flexShrink}>
+          <AppText variant="headlineMd" color="onSurface" numberOfLines={1}>
+            {props.title}
+          </AppText>
+          <AppText variant="bodyMd" color="onSurfaceVariant" numberOfLines={2} style={styles.cardBody}>
+            {props.body}
+          </AppText>
+        </View>
+      </View>
+
+      <View style={styles.cardCta}>
+        <AppText variant="labelMd" color={props.ctaColor}>
+          {props.cta}
+        </AppText>
+        <Icon name="arrow_forward" size={18} color={props.ctaColor} />
+      </View>
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: {
-    backgroundColor: colors.backgroundWarm,
-  },
-  phone: {
+  safe: {
     flex: 1,
-    width: '100%',
-    maxWidth: 390,
-    alignSelf: 'center',
-    backgroundColor: colors.backgroundWarm,
+    backgroundColor: colors.surface,
   },
-  header: {
+  content: {
+    paddingHorizontal: 20,
+    paddingBottom: 32,
+    gap: 32,
+  },
+  intro: {
+    alignItems: 'center',
+    paddingTop: 16,
+    gap: 4,
+  },
+  heart: {
+    width: 48,
+    height: 48,
+    borderRadius: corner.full,
+    backgroundColor: colors.surfaceContainer,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 4,
+    boxShadow: elevation.sm,
+  },
+  introTitle: {
+    letterSpacing: -0.6,
+  },
+  introBody: {
+    maxWidth: 320,
+    lineHeight: 26,
+  },
+  cards: {
+    gap: 16,
+  },
+  card: {
+    padding: 24,
+    borderRadius: corner.cardLg,
+    backgroundColor: colors.surfaceContainerLowest,
+    boxShadow: elevation.card,
+    overflow: 'hidden',
+  },
+  pressed: {
+    transform: [{ scale: 0.98 }],
+  },
+  cardTop: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  chip: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: corner.full,
+    flexShrink: 1,
+  },
+  cornerIcon: {
+    width: 32,
+    height: 32,
+    borderRadius: corner.full,
+    backgroundColor: colors.surfaceContainerLow,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cardMiddle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 16,
+    marginTop: 4,
+  },
+  cardIcon: {
+    width: 56,
+    height: 56,
+    borderRadius: corner.xxl,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  flexShrink: {
+    flex: 1,
+    minWidth: 0,
+  },
+  cardBody: {
+    marginTop: 4,
+  },
+  cardCta: {
+    marginTop: 16,
+    paddingTop: 4,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: spacing.sm,
-    paddingVertical: spacing.xxs,
   },
-  headerTitle: {
-    flex: 1,
-    textAlign: 'center',
-    fontSize: 17,
-    lineHeight: 22,
-    fontWeight: '600',
-  },
-  content: {
-    paddingHorizontal: spacing.md,
-    paddingBottom: spacing.xxl,
-    gap: spacing.sm,
-  },
-  hero: {
+  nest: {
+    flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: spacing.md,
-    paddingBottom: spacing.sm,
-    gap: spacing.xs,
+    gap: 16,
+    padding: 16,
+    borderRadius: corner.cardLg,
+    backgroundColor: colors.surfaceContainerLow,
+    overflow: 'hidden',
   },
-  heartWrap: {
-    width: 56,
-    height: 56,
-    borderRadius: radius.full,
-    backgroundColor: colors.heartWash,
+  nestImage: {
+    width: 64,
+    height: 64,
+    borderRadius: corner.xxl,
+    backgroundColor: colors.surfaceContainer,
+  },
+  nestBody: {
+    marginTop: 4,
+  },
+  security: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 16,
+    padding: 16,
+    borderRadius: corner.card,
+    backgroundColor: 'rgba(255, 224, 241, 0.6)',
+  },
+  securityIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: corner.full,
+    backgroundColor: colors.surfaceContainerLowest,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: spacing.xxs,
+    boxShadow: elevation.sm,
   },
-  heartGlyph: {
-    color: colors.heart,
-    fontSize: 26,
-    lineHeight: 30,
-  },
-  headline: {
-    fontSize: 26,
-    lineHeight: 32,
-    fontWeight: '700',
-  },
-  subtitle: {
-    fontSize: 14,
-    lineHeight: 20,
-    maxWidth: 280,
+  securityText: {
+    flex: 1,
+    lineHeight: 19.5,
   },
 });

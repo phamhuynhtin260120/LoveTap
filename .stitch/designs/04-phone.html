@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHẠM - Nhập số điện thoại</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "surface-variant": "#fdd8ed",
+                            "surface": "#fff8f9",
+                            "surface-container": "#ffe8f3",
+                            "secondary-fixed-dim": "#f9b5b5",
+                            "surface-tint": "#a13d3f",
+                            "on-primary-fixed-variant": "#82252a",
+                            "on-secondary-fixed": "#350f11",
+                            "on-primary-fixed": "#410007",
+                            "on-error-container": "#93000a",
+                            "inverse-primary": "#ffb3b1",
+                            "surface-container-high": "#ffe0f1",
+                            "on-surface-variant": "#564241",
+                            "primary-container": "#f47c7c",
+                            "tertiary-fixed": "#eaddff",
+                            "on-primary-container": "#6c151c",
+                            "on-error": "#ffffff",
+                            "tertiary-container": "#a899c4",
+                            "on-secondary-container": "#7b4849",
+                            "background": "#fff8f9",
+                            "on-tertiary-fixed": "#201538",
+                            "on-secondary-fixed-variant": "#69393a",
+                            "surface-bright": "#fff8f9",
+                            "on-tertiary-fixed-variant": "#4d4066",
+                            "surface-dim": "#f4d0e5",
+                            "primary-fixed-dim": "#ffb3b1",
+                            "secondary-container": "#ffbbbb",
+                            "surface-container-highest": "#fdd8ed",
+                            "tertiary": "#65587f",
+                            "secondary": "#855051",
+                            "on-background": "#2a1423",
+                            "surface-container-low": "#fff0f6",
+                            "tertiary-fixed-dim": "#cfbfec",
+                            "on-secondary": "#ffffff",
+                            "surface-container-lowest": "#ffffff",
+                            "on-primary": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "error": "#ba1a1a",
+                            "outline-variant": "#dcc0bf",
+                            "primary-fixed": "#ffdad8",
+                            "on-surface": "#2a1423",
+                            "outline": "#897170",
+                            "secondary-fixed": "#ffdad9",
+                            "on-tertiary-container": "#3c3155",
+                            "on-tertiary": "#ffffff",
+                            "inverse-on-surface": "#ffecf5",
+                            "primary": "#a13d3f",
+                            "inverse-surface": "#412939"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px",
+                            "card": "24px"
+                    },
+                    "spacing": {
+                            "sm": "8px",
+                            "lg": "24px",
+                            "margin-mobile": "20px",
+                            "margin-desktop": "40px",
+                            "md": "16px",
+                            "gutter": "16px",
+                            "xl": "32px",
+                            "unit": "4px",
+                            "xs": "4px"
+                    },
+                    "fontFamily": {
+                            "label-sm": ["Quicksand"],
+                            "body-lg": ["Quicksand"],
+                            "label-md": ["Quicksand"],
+                            "headline-md": ["Quicksand"],
+                            "display": ["Quicksand"],
+                            "body-md": ["Quicksand"],
+                            "headline-lg": ["Quicksand"],
+                            "headline-lg-mobile": ["Quicksand"]
+                    },
+                    "fontSize": {
+                            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Soft Skeuomorphic Inputs */
+        .soft-input {
+            background-color: #FFFDFC;
+            border: 1px solid #FFD7C2;
+            transition: all 0.3s ease;
+        }
+        .soft-input:focus-within {
+            border-color: #F47C7C;
+            box-shadow: 0 0 0 4px rgba(244, 124, 124, 0.1);
+        }
+
+        /* Pillowy Button */
+        .btn-primary {
+            background: linear-gradient(180deg, #F47C7C 0%, #F8B4B4 100%);
+            box-shadow: 0 4px 12px rgba(69, 45, 61, 0.08);
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:active {
+            transform: scale(0.98) translateY(2px);
+            box-shadow: 0 2px 4px rgba(69, 45, 61, 0.04);
+            background: linear-gradient(180deg, #F8B4B4 0%, #F47C7C 100%); /* Reverse gradient on press for depth */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#FFFDFC] text-on-surface antialiased min-h-screen flex flex-col font-sans selection:bg-primary-container selection:text-on-primary-container">
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col w-full max-w-md mx-auto px-margin-mobile pt-16 pb-lg relative">
+<!-- Back Button (Conceptual) -->
+<div class="mb-xl">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:bg-surface-container-low transition-colors active:scale-95">
+<span class="material-symbols-outlined text-headline-md">arrow_back</span>
+</button>
+</div>
+<!-- Header -->
+<div class="mb-xl text-center space-y-md">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary">Nhập số điện thoại</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mx-auto">
+                Chúng tôi sẽ gửi một mã xác nhận gồm 6 chữ số đến số điện thoại này.
+            </p>
+</div>
+<!-- Input Form -->
+<div class="space-y-lg flex-1">
+<div class="soft-input rounded-card p-4 flex items-center gap-sm">
+<!-- Country Code Selector (Simplified) -->
+<button class="flex items-center gap-xs pr-4 border-r border-outline-variant/50 hover:bg-surface-container-low rounded-lg p-2 transition-colors">
+<span class="text-xl">🇻🇳</span>
+<span class="font-label-md text-label-md text-on-surface">+84</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_drop_down</span>
+</button>
+<!-- Phone Input -->
+<input autocomplete="tel" class="flex-1 bg-transparent border-none outline-none font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 focus:ring-0 px-2" placeholder="Số điện thoại của bạn" type="tel"/>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="mt-auto pt-lg">
+<button class="btn-primary w-full py-4 rounded-full font-label-md text-label-md text-on-primary flex items-center justify-center gap-sm">
+                Nhận mã xác nhận
+            </button>
+</div>
+</main>
+<script>
+        // Simple input focus interaction
+        const inputField = document.querySelector('input[type="tel"]');
+        
+        // Auto-focus the input on load for immediate interaction
+        window.onload = () => {
+             setTimeout(() => {
+                 inputField.focus();
+             }, 300);
+        };
+    </script>
+</body></html>

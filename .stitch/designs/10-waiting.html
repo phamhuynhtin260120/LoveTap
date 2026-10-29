@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f9;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#f47c7c", "secondary-fixed": "#ffdad9", "on-secondary-fixed-variant": "#69393a", "on-tertiary-fixed-variant": "#4d4066", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "background": "#fff8f9", "on-surface": "#2a1423", "on-error": "#ffffff", "outline": "#897170", "inverse-primary": "#ffb3b1", "inverse-surface": "#412939", "surface-variant": "#fdd8ed", "surface-container-high": "#ffe0f1", "secondary": "#855051", "on-tertiary-container": "#3c3155", "on-secondary": "#ffffff", "surface-dim": "#f4d0e5", "secondary-container": "#ffbbbb", "on-primary": "#ffffff", "inverse-on-surface": "#ffecf5", "on-tertiary": "#ffffff", "tertiary-fixed": "#eaddff", "error-container": "#ffdad6", "tertiary": "#65587f", "on-background": "#2a1423", "surface-bright": "#fff8f9", "on-secondary-container": "#7b4849", "primary": "#a13d3f", "surface-container": "#ffe8f3", "surface-container-low": "#fff0f6", "surface": "#fff8f9", "on-surface-variant": "#564241", "secondary-fixed-dim": "#f9b5b5", "on-primary-container": "#6c151c", "surface-tint": "#a13d3f", "surface-container-highest": "#fdd8ed", "tertiary-container": "#a899c4", "on-primary-fixed": "#410007", "on-secondary-fixed": "#350f11", "error": "#ba1a1a", "on-tertiary-fixed": "#201538", "tertiary-fixed-dim": "#cfbfec", "primary-fixed-dim": "#ffb3b1", "outline-variant": "dcc0bf", "primary-fixed": "#ffdad8", "on-primary-fixed-variant": "#82252a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "16px", "xs": "4px", "margin-desktop": "40px", "unit": "4px", "sm": "8px", "lg": "24px", "md": "16px", "margin-mobile": "20px", "xl": "32px" }, fontFamily: { "display": ["Quicksand"], "headline-lg": ["Quicksand"], "label-md": ["Quicksand"], "body-md": ["Quicksand"], "headline-md": ["Quicksand"], "body-lg": ["Quicksand"], "headline-lg-mobile": ["Quicksand"], "label-sm": ["Quicksand"] }, fontSize: { "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(69,45,61,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Quay lại" class="w-11 h-11 flex items-center justify-center -ml-2 text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><h1 class="font-headline-md text-headline-md text-on-surface font-semibold truncate">Cài Đặt Kết Nối</h1></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen pb-safe"><div class="flex flex-col w-full px-margin-mobile pb-xl">
+<!-- Interactive Floating Background Ambient Particles -->
+<div class="relative w-full flex flex-col items-center pt-sm">
+<!-- Connection Pulse Visual Area -->
+<div class="relative w-full max-w-xs h-40 flex items-center justify-between px-4 my-2">
+<!-- Ambient Glow Behind Connection -->
+<div class="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none">
+<div class="w-64 h-32 bg-surface-variant/40 rounded-full blur-2xl"></div>
+</div>
+<!-- User Avatar (Active) -->
+<div class="relative flex flex-col items-center">
+<div class="relative w-20 h-20 rounded-full p-1 bg-surface-container-low shadow-[0_8px_24px_rgba(69,45,61,0.08)] flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="A gentle, warm portrait of a smiling young Vietnamese person captured in soft natural morning sunlight. Warm pastel tones, cinematic film grain, cozy aesthetic matching soft peach and muted rose tones, serene emotional atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN0busGkuDuzvVBaGVPKMZ8Ow74VWP2rW2qQOtxFDi_sMVKZxjmMvqNjpRnURtoL5Y-pKbOpfBrxO3ctdzv-uBRSg9LYHDy70yKRswdsGyYxhFNV58SBqJDcxZdaNtdR156-aiDK034avpRP25wXkmJd5ILSmaS9qF5BglkAI_3VRAR50Z9weSdsSXym-CGHB92n_aTD-f9HDyuvGL4N2CTqWXFjG2K0AyRBGLDLp5fMH1NnMRnEar6A"/>
+<!-- Gentle online dot -->
+<div class="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-on-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold mt-2">Bạn</span>
+</div>
+<!-- Connecting Organic Thread with Breathing Pulse -->
+<div class="flex-1 px-3 relative flex items-center justify-center">
+<!-- SVG Connecting Wave -->
+<svg class="w-full h-12 overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M 0 12 Q 25 3, 50 12 T 100 12" fill="none" opacity="0.6" stroke="#dcc0bf" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Traveling luminous light orb -->
+<circle fill="#f47c7c" opacity="0.9" r="3.5">
+<animatemotion dur="2.8s" path="M 0 12 Q 25 3, 50 12 T 100 12" repeatcount="indefinite"></animatemotion>
+</circle>
+</svg>
+<!-- Subtle heartbeat pulse icon at center -->
+<div class="absolute w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[18px] animate-pulse" style="font-variation-settings: 'FILL' 1;">sync</span>
+</div>
+</div>
+<!-- Partner Placeholder (Waiting) -->
+<div class="relative flex flex-col items-center">
+<div class="relative w-20 h-20 rounded-full bg-surface-container-low flex flex-col items-center justify-center shadow-[0_8px_24px_rgba(69,45,61,0.04)]">
+<!-- Animated Ring Pulse -->
+<div class="absolute inset-0 rounded-full bg-surface-variant/30 animate-ping opacity-75"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium mt-2 animate-pulse">Đang đợi...</span>
+</div>
+</div>
+<!-- Soft Emotion Messaging -->
+<div class="text-center mt-3 max-w-sm">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">
+        Đang chờ người ấy
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 px-2 leading-relaxed">
+        Lời mời đã được gửi đi. Ứng dụng sẽ tự động mở không gian chung ngay khi người ấy nhập mã.
+      </p>
+</div>
+<!-- Active Invite Code Floating Card -->
+<div class="w-full max-w-sm mt-6 p-6 rounded-[24px] bg-surface-container-lowest shadow-[0_12px_32px_rgba(69,45,61,0.06)] flex flex-col items-center relative overflow-hidden">
+<!-- Decorative faint warm accent -->
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-surface-container-high/60 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">key</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Mã kết nối của hai bạn</span>
+</div>
+<!-- Code Box with Copy Interaction -->
+<button class="mt-4 w-full py-4 px-5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex items-center justify-between group active:scale-[0.98]" id="copyCodeBtn" onclick="copyInvitationCode()" title="Nhấn để sao chép">
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mã chia sẻ</span>
+<span class="font-display text-[26px] leading-8 font-bold tracking-widest text-primary" id="inviteCodeText">CHAM-8QZ7</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary group-hover:scale-105 transition-transform" id="copyBadge">
+<span class="material-symbols-outlined text-[20px]" id="copyIcon">content_copy</span>
+</div>
+</button>
+<!-- Countdown Expiry Timer Pill -->
+<div class="mt-4 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-label-sm text-label-sm font-medium">Còn 47 giờ 59 phút</span>
+</div>
+<!-- Toast Feedback (hidden by default) -->
+<div class="opacity-0 transition-opacity duration-300 pointer-events-none mt-2 text-center font-label-sm text-label-sm text-primary font-medium" id="copyToast">
+        Đã sao chép mã kết nối!
+      </div>
+</div>
+<!-- Action Buttons -->
+<div class="w-full max-w-sm mt-6 flex flex-col gap-3">
+<!-- Primary Pillowy Action Button -->
+<button class="w-full py-3.5 px-6 rounded-full bg-gradient-to-b from-[#f47c7c] to-[#f8b4b4] text-on-primary font-label-md text-label-md shadow-[0_8px_20px_rgba(244,124,124,0.35)] hover:opacity-95 active:scale-[0.98] transition-all flex items-center justify-center gap-2" onclick="resendInvitation()">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Gửi lại lời mời</span>
+</button>
+<!-- Neutral Supportive Secondary Link -->
+<button class="w-full py-2.5 px-4 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 opacity-80 hover:opacity-100" onclick="confirmCancelModal()">
+<span>Hủy lời mời này</span>
+</button>
+</div>
+<!-- Gentle Reminder / Tip Note -->
+<div class="w-full max-w-sm mt-6 p-4 rounded-[20px] bg-surface-container-low flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex-shrink-0 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed pt-1">
+        Hai bạn chỉ cần kết nối một lần duy nhất. Tất cả ký ức, tin nhắn và lịch hẹn sẽ mãi mãi được lưu giữ trọn vẹn tại đây.
+      </p>
+</div>
+<!-- Micro-interaction: Animated Heart Sprinkle Area -->
+<div class="mt-4 flex items-center gap-1 text-secondary opacity-60">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="font-label-sm text-label-sm">Không gian riêng tư chỉ dành riêng cho 2 người</span>
+</div>
+</div>
+</div>
+<script>
+  function copyInvitationCode() {
+    const code = document.getElementById('inviteCodeText').innerText;
+    navigator.clipboard?.writeText(code).then(() => {
+      showCopyFeedback();
+    }).catch(() => {
+      // Fallback
+      showCopyFeedback();
+    });
+  }
+
+  function showCopyFeedback() {
+    const toast = document.getElementById('copyToast');
+    const icon = document.getElementById('copyIcon');
+    const badge = document.getElementById('copyBadge');
+    
+    if (toast && icon && badge) {
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      icon.innerText = 'check';
+      badge.classList.add('bg-primary', 'text-on-primary');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+        icon.innerText = 'content_copy';
+        badge.classList.remove('bg-primary', 'text-on-primary');
+      }, 2200);
+    }
+  }
+
+  function resendInvitation() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Lời mời kết đôi trên CHẠM',
+        text: 'Mình đang chờ bạn trên CHẠM. Nhập mã CHAM-8QZ7 để vào không gian chung nhé!',
+      }).catch(() => {});
+    } else {
+      copyInvitationCode();
+    }
+  }
+
+  function confirmCancelModal() {
+    const confirmed = window.confirm("Bạn có chắc muốn hủy lời mời này không? Người ấy sẽ không thể dùng mã hiện tại nữa.");
+    if (confirmed) {
+      window.history.back();
+    }
+  }
+</script></main></body></html>

@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.full,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.surface,
+    backgroundColor: colors.legacySurface,
   },
   plain: {
     backgroundColor: 'transparent',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.avatarFill,
   },
   outline: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.legacySurface,
     borderWidth: 1,
     borderColor: colors.border,
   },

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: radius.full,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.legacySurface,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.xs,

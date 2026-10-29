@@ -22,7 +22,7 @@ export function MomentsScreen() {
 
 const styles = StyleSheet.create({
   screen: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.legacyBackground,
   },
   phone: {
     flex: 1,

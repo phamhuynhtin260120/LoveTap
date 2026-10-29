@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHẠM - Đăng nhập</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#fdd8ed",
+                    "surface": "#fff8f9",
+                    "surface-container": "#ffe8f3",
+                    "secondary-fixed-dim": "#f9b5b5",
+                    "surface-tint": "#a13d3f",
+                    "on-primary-fixed-variant": "#82252a",
+                    "on-secondary-fixed": "#350f11",
+                    "on-primary-fixed": "#410007",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#ffb3b1",
+                    "surface-container-high": "#ffe0f1",
+                    "on-surface-variant": "#564241",
+                    "primary-container": "#f47c7c",
+                    "tertiary-fixed": "#eaddff",
+                    "on-primary-container": "#6c151c",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#a899c4",
+                    "on-secondary-container": "#7b4849",
+                    "background": "#fff8f9",
+                    "on-tertiary-fixed": "#201538",
+                    "on-secondary-fixed-variant": "#69393a",
+                    "surface-bright": "#fff8f9",
+                    "on-tertiary-fixed-variant": "#4d4066",
+                    "surface-dim": "#f4d0e5",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "secondary-container": "#ffbbbb",
+                    "surface-container-highest": "#fdd8ed",
+                    "tertiary": "#65587f",
+                    "secondary": "#855051",
+                    "on-background": "#2a1423",
+                    "surface-container-low": "#fff0f6",
+                    "tertiary-fixed-dim": "#cfbfec",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#dcc0bf",
+                    "primary-fixed": "#ffdad8",
+                    "on-surface": "#2a1423",
+                    "outline": "#897170",
+                    "secondary-fixed": "#ffdad9",
+                    "on-tertiary-container": "#3c3155",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#ffecf5",
+                    "primary": "#a13d3f",
+                    "inverse-surface": "#412939"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "lg": "24px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "40px",
+                    "md": "16px",
+                    "gutter": "16px",
+                    "xl": "32px",
+                    "unit": "4px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": [
+                            "Quicksand"
+                    ],
+                    "body-lg": [
+                            "Quicksand"
+                    ],
+                    "label-md": [
+                            "Quicksand"
+                    ],
+                    "headline-md": [
+                            "Quicksand"
+                    ],
+                    "display": [
+                            "Quicksand"
+                    ],
+                    "body-md": [
+                            "Quicksand"
+                    ],
+                    "headline-lg": [
+                            "Quicksand"
+                    ],
+                    "headline-lg-mobile": [
+                            "Quicksand"
+                    ]
+            },
+            "fontSize": {
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(180deg, #F47C7C 0%, #F8B4B4 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-40 mix-blend-multiply bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-variant via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full h-full pointer-events-none opacity-40 mix-blend-multiply bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-surface-container-high via-transparent to-transparent"></div>
+<main class="w-full max-w-md px-margin-mobile flex flex-col items-center z-10">
+<div class="mb-xl text-center flex flex-col items-center">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-md shadow-[0_8px_24px_rgba(69,45,61,0.06)]">
+<span class="font-display text-display text-primary tracking-tight">CHẠM</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-sm">Chào bạn</h1>
+<p class="font-body-md text-body-md text-on-surface-variant text-center max-w-[280px]">Bước vào không gian dành riêng cho hai người.</p>
+</div>
+<div class="w-full flex flex-col gap-md">
+<button class="w-full h-[56px] rounded-xl bg-surface shadow-[0_8px_24px_rgba(69,45,61,0.06)] flex items-center justify-center gap-md px-lg active:scale-[0.98] transition-transform duration-200 border border-outline-variant/30">
+<span class="material-symbols-outlined text-on-surface">file_download</span>
+<span class="font-label-md text-label-md text-on-surface">Tiếp tục với Apple</span>
+</button>
+<button class="w-full h-[56px] rounded-xl bg-surface shadow-[0_8px_24px_rgba(69,45,61,0.06)] flex items-center justify-center gap-md px-lg active:scale-[0.98] transition-transform duration-200 border border-outline-variant/30">
+<svg aria-hidden="true" class="w-6 h-6" viewbox="0 0 24 24">
+<path d="M12.0003 4.75C13.7703 4.75 15.3553 5.36 16.6053 6.54L20.0303 3.12C17.9503 1.19 15.2403 0 12.0003 0C7.31028 0 3.25528 2.69 1.28027 6.61L5.27027 9.7C6.21027 6.81 8.87028 4.75 12.0003 4.75Z" fill="#EA4335"></path>
+<path d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z" fill="#4285F4"></path>
+<path d="M5.26498 14.29C5.02498 13.57 4.88501 12.8 4.88501 12C4.88501 11.2 5.01498 10.43 5.26498 9.71L1.275 6.62C0.46 8.23 0 10.06 0 12C0 13.94 0.46 15.77 1.28 17.38L5.26498 14.29Z" fill="#FBBC05"></path>
+<path d="M12.0004 24C15.2404 24 17.9654 22.93 19.9454 21.09L16.0804 18.09C15.0054 18.81 13.6204 19.25 12.0004 19.25C8.8704 19.25 6.21537 17.19 5.26537 14.29L1.27539 17.38C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853"></path>
+</svg>
+<span class="font-label-md text-label-md text-on-surface">Tiếp tục với Google</span>
+</button>
+<div class="relative flex py-md items-center">
+<div class="flex-grow border-t border-outline-variant/30"></div>
+<span class="flex-shrink-0 mx-4 font-label-sm text-label-sm text-on-surface-variant">hoặc</span>
+<div class="flex-grow border-t border-outline-variant/30"></div>
+</div>
+<button class="w-full h-[56px] rounded-xl bg-gradient-primary shadow-[0_8px_24px_rgba(69,45,61,0.06)] flex items-center justify-center gap-md px-lg active:scale-[0.98] transition-transform duration-200">
+<span class="material-symbols-outlined text-on-primary">phone_iphone</span>
+<span class="font-label-md text-label-md text-on-primary">Đăng nhập bằng số điện thoại</span>
+</button>
+</div>
+<div class="mt-xl text-center px-lg">
+<p class="font-label-sm text-label-sm text-on-surface-variant/80">
+                Bằng việc tiếp tục, bạn đồng ý với <a class="text-primary hover:underline underline-offset-2" href="#">Điều khoản sử dụng</a> và <a class="text-primary hover:underline underline-offset-2" href="#">Chính sách bảo mật</a> của CHẠM.
+            </p>
+</div>
+</main>
+</body></html>

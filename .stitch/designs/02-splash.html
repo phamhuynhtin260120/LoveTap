@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHẠM - Splash Screen</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#fdd8ed",
+                        "surface": "#fff8f9",
+                        "surface-container": "#ffe8f3",
+                        "secondary-fixed-dim": "#f9b5b5",
+                        "surface-tint": "#a13d3f",
+                        "on-primary-fixed-variant": "#82252a",
+                        "on-secondary-fixed": "#350f11",
+                        "on-primary-fixed": "#410007",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb3b1",
+                        "surface-container-high": "#ffe0f1",
+                        "on-surface-variant": "#564241",
+                        "primary-container": "#f47c7c",
+                        "tertiary-fixed": "#eaddff",
+                        "on-primary-container": "#6c151c",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#a899c4",
+                        "on-secondary-container": "#7b4849",
+                        "background": "#FFF9F5",
+                        "on-tertiary-fixed": "#201538",
+                        "on-secondary-fixed-variant": "#69393a",
+                        "surface-bright": "#fff8f9",
+                        "on-tertiary-fixed-variant": "#4d4066",
+                        "surface-dim": "#f4d0e5",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "secondary-container": "#ffbbbb",
+                        "surface-container-highest": "#fdd8ed",
+                        "tertiary": "#65587f",
+                        "secondary": "#855051",
+                        "on-background": "#2a1423",
+                        "surface-container-low": "#fff0f6",
+                        "tertiary-fixed-dim": "#cfbfec",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#dcc0bf",
+                        "primary-fixed": "#ffdad8",
+                        "on-surface": "#2a1423",
+                        "outline": "#897170",
+                        "secondary-fixed": "#ffdad9",
+                        "on-tertiary-container": "#3c3155",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ffecf5",
+                        "primary": "#a13d3f",
+                        "inverse-surface": "#412939"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "sm": "8px",
+                        "lg": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px",
+                        "md": "16px",
+                        "gutter": "16px",
+                        "xl": "32px",
+                        "unit": "4px",
+                        "xs": "4px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Quicksand"],
+                        "body-lg": ["Quicksand"],
+                        "label-md": ["Quicksand"],
+                        "headline-md": ["Quicksand"],
+                        "display": ["Quicksand"],
+                        "body-md": ["Quicksand"],
+                        "headline-lg": ["Quicksand"],
+                        "headline-lg-mobile": ["Quicksand"]
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle pulse animation for logo */
+        @keyframes gentle-pulse {
+            0% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.02); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.9; }
+        }
+        
+        .animate-gentle-pulse {
+            animation: gentle-pulse 4s ease-in-out infinite;
+        }
+        
+        /* Fade up animation for text */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-up {
+            animation: fade-up 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+        
+        .delay-600 {
+            animation-delay: 600ms;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-[#FFF9F5] to-[#FFFDFC] min-h-screen flex flex-col items-center justify-center overflow-hidden font-display">
+<!-- Navigation suppression: Intent is Splash/Transactional, no BottomNavBar or TopAppBar -->
+<main class="flex flex-col items-center justify-center w-full px-margin-mobile max-w-md mx-auto relative z-10">
+<!-- Logo Container -->
+<div class="mb-xl animate-fade-up animate-gentle-pulse flex flex-col items-center mb-8">
+<div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.05)] bg-white flex items-center justify-center">
+<img alt="CHẠM Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VYEFa1hCUD-CodmDIOCiSsi16ifnsNzZmwey9zF3-2oHAFXg9NLL1VyUI2Ubi-ejpMsINvm0W32HBH-CQHe7oGcauahA2xIdN17Ptb028pQGbgewhaxtLojFJuYCI4gnSn9JamaBlqbYxisHoc_lKOA0VIKG-fk89mkGZjzyDpxSaIY-PE4SJntfQNRiZgf9DpkE6uSPH4_Dh5p-08F0-0r_wpHujAVEOL4P3wKTbS0EnoK6A42raSyonE"/>
+</div>
+</div>
+<!-- App Name -->
+<h1 class="font-display text-display text-[#452D3D] font-bold tracking-tight mb-4 animate-fade-up delay-300 text-center tracking-[0.15em]">
+            CHẠM
+        </h1>
+<!-- Tagline -->
+<p class="font-body-lg text-body-lg text-[#806B78] text-center animate-fade-up delay-600 max-w-[280px] italic">Không cần nói, người ấy vẫn hiểu.</p>
+</main>
+<!-- Decorative background elements -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+<!-- Soft top-right gradient -->
+<div class="absolute -top-[20%] -right-[20%] w-[60%] h-[60%] rounded-full bg-primary-container/10 blur-[100px]"></div>
+<!-- Soft bottom-left gradient -->
+<div class="absolute -bottom-[20%] -left-[20%] w-[60%] h-[60%] rounded-full bg-secondary-container/10 blur-[100px]"></div>
+<!-- Additional soft aura for warmth -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rounded-full bg-primary-container/5 blur-[120px] z-0"></div>
+</div>
+<script>
+        // Simple script to transition out of splash screen (simulate)
+        setTimeout(() => {
+            const body = document.querySelector('body');
+            body.style.transition = 'opacity 1s ease';
+            body.style.opacity = '0';
+            
+            // In a real app, this would route to the main dashboard or onboarding
+            console.log('Transition to main app');
+        }, 3500);
+    </script>
+</body></html>

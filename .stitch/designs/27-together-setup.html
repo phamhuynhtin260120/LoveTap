@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Thiết lập Hai Đứa - Chạm</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Quicksand -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#a899c4",
+                        "surface": "#fff8f9",
+                        "inverse-on-surface": "#ffecf5",
+                        "on-error-container": "#93000a",
+                        "primary": "#a13d3f",
+                        "surface-container": "#ffe8f3",
+                        "on-tertiary-container": "#3c3155",
+                        "on-secondary-fixed": "#350f11",
+                        "surface-dim": "#f4d0e5",
+                        "surface-variant": "#fdd8ed",
+                        "secondary-fixed-dim": "#f9b5b5",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fff8f9",
+                        "outline-variant": "#dcc0bf",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#ffbbbb",
+                        "on-surface-variant": "#564241",
+                        "on-secondary-fixed-variant": "#69393a",
+                        "on-primary-fixed": "#410007",
+                        "surface-container-highest": "#fdd8ed",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdad8",
+                        "tertiary-fixed-dim": "#cfbfec",
+                        "surface-tint": "#a13d3f",
+                        "secondary-fixed": "#ffdad9",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "background": "#fff8f9",
+                        "on-tertiary-fixed-variant": "#4d4066",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#82252a",
+                        "inverse-primary": "#ffb3b1",
+                        "outline": "#897170",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#ffe0f1",
+                        "on-tertiary-fixed": "#201538",
+                        "tertiary": "#65587f",
+                        "secondary": "#855051",
+                        "primary-container": "#f47c7c",
+                        "on-primary-container": "#6c151c",
+                        "inverse-surface": "#412939",
+                        "on-secondary-container": "#7b4849",
+                        "on-background": "#2a1423",
+                        "on-surface": "#2a1423",
+                        "tertiary-fixed": "#eaddff",
+                        "surface-container-low": "#fff0f6",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "card": "24px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Quicksand"],
+                        "body-lg": ["Quicksand"],
+                        "headline-lg-mobile": ["Quicksand"],
+                        "headline-lg": ["Quicksand"],
+                        "label-sm": ["Quicksand"],
+                        "display": ["Quicksand"],
+                        "headline-md": ["Quicksand"],
+                        "label-md": ["Quicksand"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+                    },
+                    "boxShadow": {
+                        "soft": "0 8px 24px rgba(69, 45, 61, 0.06)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            background-color: #fff8f9; /* background */
+            color: #2a1423; /* on-background */
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        /* Hide scrollbar for clean UI */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .glass-header {
+            background: rgba(255, 248, 249, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<!-- JSON Mandates: 
+         "name": "TopAppBar", "type": "small_center_aligned", "headline": "CHẠM" (Overridden by user request: "Thiết lập Hai Đứa"),
+         "leading_icon": "arrow_back", "trailing_icon": "settings" (Hidden for setup screen),
+         "style_bg_color": "bg-surface/80 dark:bg-surface-dim/80", 
+         "style_primary_color": "text-primary dark:text-primary-fixed-dim",
+         "style_typography": "font-headline-md text-headline-md",
+         "style_brand_logo": "font-display text-display text-primary tracking-tighter",
+         "style_component_shape": "fixed top-0 w-full",
+         "style_separation_logic": "backdrop-blur-md bg-surface/80",
+         "style_shadows_and_elevation": "flat no shadows",
+         "style_shell_layout": "flex items-center justify-between px-margin-mobile h-16 w-full z-50"
+    -->
+<header class="fixed top-0 w-full backdrop-blur-md bg-surface/80 flat no shadows flex items-center justify-between px-margin-mobile h-16 z-50">
+<button aria-label="Go back" class="hover:opacity-80 transition-opacity active:scale-95 duration-200 p-2 -ml-2 text-primary">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold">Thiết lập Hai Đứa</h1>
+<div class="w-10"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-margin-mobile max-w-2xl mx-auto space-y-xl">
+<!-- Section: Ảnh đại diện đôi -->
+<section class="bg-[#FFFDFC] rounded-card p-lg shadow-soft relative overflow-hidden">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-md">Ảnh đại diện đôi</h2>
+<!-- Cover Photo Area -->
+<div class="relative w-full h-40 rounded-xl overflow-hidden mb-8 group cursor-pointer">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="A soft, romantic digital illustration of a serene landscape at twilight, featuring pastel pink and purple hues. The scene includes gentle rolling hills and a subtle glowing sky, embodying the 'Soft Emotional Minimalism' aesthetic. The lighting is ethereal and warm, creating a calming, intimate mood perfect for a couple's shared digital space cover photo." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAV_G2ao9EmiOSgxtwxKHWaQp2ysWia8bx3mZNnJoN8LNFfW6OeBLQEMlW8Tl-tOUFp0_rUPbu69y38eNTUcGhVTha2XmwA6Mpkqc9tYaM58n1br70FC5IGQBTHhRsvseVNotrrKpY5oOqRMcfWL0hui0o2CKhdAS82FCJjmjiPjmrLM2lXobQNph7xGSjGsPz1TGrjk7tgjma-pbts-nthRhJCObCqOnCmVOhaPufdaCyhn8Hv_-0SMw')"></div>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-3xl">add_a_photo</span>
+</div>
+</div>
+<!-- Avatars -->
+<div class="flex justify-center items-center -mt-16 relative z-10 space-x-6">
+<!-- Avatar 1 (Anh) -->
+<div class="flex flex-col items-center">
+<div class="relative group cursor-pointer">
+<div class="w-20 h-20 rounded-full border-4 border-white shadow-sm overflow-hidden bg-surface-container">
+<img class="object-cover w-full h-full" data-alt="A minimalist, soft-focus avatar portrait of a young man with a gentle expression. The illustration style uses warm ivory and soft plum tones, keeping with the 'Soft Emotional Minimalism' aesthetic. The background is a very light pastel pink, providing a clean and intimate feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtwNmEIUs723E_EQObDPsCYCvSsQ8vbYXzt4_-Hs9eBM8OahAEZPtnrp6CA1nG89w7hTK4A0G5PiRJF6GaFe4fwtthHg8fcefiya3j-U-zH9oifjn-MP5DsvgaarGm9BKcBH0fTRN1H_38wrbkg3iDj1OFqO9muhessjCIatjFNidh_QME1Lg6nJvvDN-Wuwjmi8Xy-LKOMI80ZFDwri_KJKspEMgnpjCvxjm535TwCuKx3A94CD2bZg"/>
+</div>
+<div class="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-xl">edit</span>
+</div>
+</div>
+</div>
+<!-- Heart Icon connecting them -->
+<div class="bg-primary-container text-white rounded-full p-2 shadow-sm transform -translate-y-4">
+<span class="material-symbols-outlined filled text-xl">favorite</span>
+</div>
+<!-- Avatar 2 (Em) -->
+<div class="flex flex-col items-center">
+<div class="relative group cursor-pointer">
+<div class="w-20 h-20 rounded-full border-4 border-white shadow-sm overflow-hidden bg-surface-container">
+<img class="object-cover w-full h-full" data-alt="A minimalist, soft-focus avatar portrait of a young woman with a soft, warm smile. The illustration uses a palette of soft coral and warm ivory, aligning perfectly with the 'Soft Emotional Minimalism' aesthetic. The lighting is soft and flattering, set against a pristine, light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn9PT5YU_TR7RXKSEZ3SfBntUmzXPEFxb1Z4kHq_QM5pQc1WNekABmROwuPaa-f75OGp1DFzNDvkueKN0WLf51JjKTTiugCancSahrkNKXHCxICKWKprxnY_Y8fq-OM6OldtJMPEhVTzcP5gTUOoN8h9UBymem3rSgK8lcMwDFVDHXtLwuZp1pJfmfQeMeL8jCZqzpSPgWBrMTmOSpmmVgceApWA1X5h4XfWPPLxfraXy1s2V0lMld3A"/>
+</div>
+<div class="absolute inset-0 bg-black/30 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-xl">edit</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Thông tin cá nhân -->
+<section class="bg-[#FFFDFC] rounded-card p-lg shadow-soft space-y-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-sm">Danh xưng</h2>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Của bạn</label>
+<div class="relative">
+<input class="w-full bg-[#FFFDFC] border border-[#FFD7C2] rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-4 focus:ring-primary-container/10 transition-all" type="text" value="Anh"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Của người ấy</label>
+<div class="relative">
+<input class="w-full bg-[#FFFDFC] border border-[#FFD7C2] rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-4 focus:ring-primary-container/10 transition-all" type="text" value="Em"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Ngày kỷ niệm -->
+<section class="bg-[#FFFDFC] rounded-card p-lg shadow-soft flex items-center justify-between">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Ngày bắt đầu</h2>
+<p class="font-body-md text-body-md text-primary-container font-semibold">Đã yêu nhau 520 ngày</p>
+</div>
+<button class="flex items-center space-x-2 bg-surface-container px-4 py-2 rounded-xl text-primary hover:bg-surface-dim transition-colors active:scale-95">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-md text-label-md">14/02/2023</span>
+</button>
+</section>
+<!-- Section: Danh sách Cùng nhau -->
+<section class="bg-[#FFFDFC] rounded-card p-lg shadow-soft"><div class="flex justify-between items-center mb-md"><h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Bucket List</h2><div class="flex space-x-2"><span class="px-3 py-1 bg-surface-container rounded-full text-xs font-label-md text-primary">Du lịch</span><span class="px-3 py-1 bg-surface-container rounded-full text-xs font-label-md text-primary">Đời sống</span></div></div><div class="grid grid-cols-1 gap-4"><!-- Card 1 --><div class="bg-surface rounded-xl border border-surface-variant/50 overflow-hidden group transition-all hover:shadow-md"><div class="flex h-24"><div class="w-24 bg-surface-container flex items-center justify-center border-r border-surface-variant/50 cursor-pointer hover:bg-surface-dim transition-colors"><span class="material-symbols-outlined text-on-surface-variant/40">add_a_photo</span></div><div class="flex-1 p-4 flex flex-col justify-between"><div><div class="flex justify-between items-start"><span class="font-body-md text-body-md text-on-surface font-semibold">Đi Đà Lạt ngắm mây</span><span class="text-xs text-primary-container font-label-md">Du lịch</span></div><p class="text-xs text-on-surface-variant/60 mt-1">Chưa hoàn thành</p></div><div class="flex justify-end space-x-3"><button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-sm">edit</span></button><button class="text-on-surface-variant hover:text-error"><span class="material-symbols-outlined text-sm">delete</span></button></div></div></div></div><!-- Card 2 --><div class="bg-surface rounded-xl border border-surface-variant/50 overflow-hidden group transition-all hover:shadow-md"><div class="flex h-24"><div class="w-24 bg-surface-container flex items-center justify-center border-r border-surface-variant/50 cursor-pointer hover:bg-surface-dim transition-colors"><span class="material-symbols-outlined text-on-surface-variant/40">add_a_photo</span></div><div class="flex-1 p-4 flex flex-col justify-between"><div><div class="flex justify-between items-start"><span class="font-body-md text-body-md text-on-surface font-semibold">Nuôi một bé mèo</span><span class="text-xs text-primary-container font-label-md">Đời sống</span></div><p class="text-xs text-on-surface-variant/60 mt-1">Chưa hoàn thành</p></div><div class="flex justify-end space-x-3"><button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-sm">edit</span></button><button class="text-on-surface-variant hover:text-error"><span class="material-symbols-outlined text-sm">delete</span></button></div></div></div></div></div><button class="mt-6 w-full py-3 border-2 border-dashed border-primary-container/30 rounded-xl flex items-center justify-center space-x-2 text-primary-container hover:bg-primary-container/5 transition-colors group"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">add_circle</span><span class="font-label-md">Thêm điều muốn làm cùng nhau</span></button></section>
+<!-- Save Button -->
+<button class="w-full bg-gradient-to-b from-[#F47C7C] to-[#F8B4B4] text-white py-4 rounded-xl font-label-md text-label-md font-bold shadow-soft hover:opacity-90 active:scale-[0.98] transition-all transform flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined">save</span>
+<span>Lưu thay đổi</span>
+</button>
+</main>
+<!-- Navigation Shell suppressed because this is a focused task/settings screen with a back button (Transactional) -->
+</body></html>

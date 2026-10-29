@@ -28,7 +28,7 @@ export function ActionCard({ title, body, onPress }: ActionCardProps) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.legacySurface,
     borderRadius: radius.lg,
     padding: spacing.lg,
     borderWidth: 1,

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.sm,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.legacySurface,
     borderRadius: radius.lg,
     padding: spacing.sm,
     shadowColor: colors.textPink,

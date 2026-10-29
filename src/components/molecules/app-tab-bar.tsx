@@ -73,7 +73,7 @@ export function AppTabBar({ state, navigation }: AppTabBarProps) {
 
 const styles = StyleSheet.create({
   dock: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.legacySurface,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: colors.border,
     alignItems: 'center',

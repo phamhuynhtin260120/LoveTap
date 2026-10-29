@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f9;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#f47c7c", "secondary-fixed": "#ffdad9", "on-secondary-fixed-variant": "#69393a", "on-tertiary-fixed-variant": "#4d4066", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "background": "#fff8f9", "on-surface": "#2a1423", "on-error": "#ffffff", "outline": "#897170", "inverse-primary": "#ffb3b1", "inverse-surface": "#412939", "surface-variant": "#fdd8ed", "surface-container-high": "#ffe0f1", "secondary": "#855051", "on-tertiary-container": "#3c3155", "on-secondary": "#ffffff", "surface-dim": "#f4d0e5", "secondary-container": "#ffbbbb", "on-primary": "#ffffff", "inverse-on-surface": "#ffecf5", "on-tertiary": "#ffffff", "tertiary-fixed": "#eaddff", "error-container": "#ffdad6", "tertiary": "#65587f", "on-background": "#2a1423", "surface-bright": "#fff8f9", "on-secondary-container": "#7b4849", "primary": "#a13d3f", "surface-container": "#ffe8f3", "surface-container-low": "#fff0f6", "surface": "#fff8f9", "on-surface-variant": "#564241", "secondary-fixed-dim": "#f9b5b5", "on-primary-container": "#6c151c", "surface-tint": "#a13d3f", "surface-container-highest": "#fdd8ed", "tertiary-container": "#a899c4", "on-primary-fixed": "#410007", "on-secondary-fixed": "#350f11", "error": "#ba1a1a", "on-tertiary-fixed": "#201538", "tertiary-fixed-dim": "#cfbfec", "primary-fixed-dim": "#ffb3b1", "outline-variant": "dcc0bf", "primary-fixed": "#ffdad8", "on-primary-fixed-variant": "#82252a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "16px", "xs": "4px", "margin-desktop": "40px", "unit": "4px", "sm": "8px", "lg": "24px", "md": "16px", "margin-mobile": "20px", "xl": "32px" }, fontFamily: { "display": ["Quicksand"], "headline-lg": ["Quicksand"], "label-md": ["Quicksand"], "body-md": ["Quicksand"], "headline-md": ["Quicksand"], "body-lg": ["Quicksand"], "headline-lg-mobile": ["Quicksand"], "label-sm": ["Quicksand"] }, fontSize: { "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(69,45,61,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-2"><h1 class="font-headline-md text-headline-md text-primary tracking-tight font-bold">Chạm</h1></div><div class="flex items-center gap-3"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">favorite</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-xl">
+<!-- Top Navigation & Safety Reassurance -->
+<div class="flex items-center justify-between py-4">
+<div class="flex items-center gap-3">
+<button aria-label="Quay lại" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Bảo vệ &amp; Chặn an toàn</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Không gian an toàn tuyệt đối của bạn</p>
+</div>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm" id="btn-quick-exit" title="Thoát khẩn cấp" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span class="font-label-sm text-label-sm">Thoát nhanh</span>
+</button>
+</div>
+<!-- Primary Safety Reassurance Card -->
+<div class="w-full mt-2 p-lg rounded-[24px] bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-high shadow-[0_8px_24px_rgba(69,45,61,0.06)] relative overflow-hidden">
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-on-primary shadow-md shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-body-lg text-body-lg text-primary font-bold">Quyền được an yên là trên hết</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Sự an toàn và bình yên của bạn luôn là ưu tiên cao nhất tại CHẠM. Mọi quyết định thiết lập biên giới cảm xúc đều được mã hoá bảo mật và tôn trọng tuyệt đối.
+        </p>
+</div>
+</div>
+</div>
+<!-- Block Partner Section -->
+<div class="mt-lg">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-md text-label-md text-primary tracking-wider uppercase">Biện pháp phòng ngừa</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Không để lại dấu vết</span>
+</div>
+<div class="w-full p-lg rounded-[24px] bg-surface-container-lowest shadow-[0_8px_24px_rgba(69,45,61,0.06)] space-y-md">
+<!-- Target Partner Preview -->
+<div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 rounded-full overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Warm intimate soft portrait of an east asian partner under soft natural pastel lighting representing account avatar in couple connection app" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATCyWUOex09VWGs-NWOSujnc1mDQYPQ_5RbDT4NaMyBixekeHFYncSohmqIUXUcCtWztc1CjO8BKTn7h2soEFVEyU2eLESx2pUnTWbQmgfoAQ5JbfL_h-8kvcUo7Kn9UJIDsz0Sce5B8pH_9FCVPB-RRDhl4QYfbm_b6OfFpja-SrkUWm3KRdPd9pgC93yiMOHucbIt9XVpLbRlwNeo34qzkTURSDk-CCOq7jMmrKgsffUpUeMm7EMwg"/>
+</div>
+<div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Minh Quân</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Kết nối 142 ngày cùng bạn</div>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Đang kết đôi</span>
+</div>
+<!-- Protocol Guarantees -->
+<div class="space-y-3 pt-1">
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">vibration</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Chặn hoàn toàn nhịp rung haptic thời gian thực, khoảnh khắc lưu trữ, tin nhắn thoại và tín hiệu định vị.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">visibility_off</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Đối phương <strong class="font-semibold text-primary">KHÔNG nhận được thông báo</strong> bị chặn. Màn hình của họ chỉ hiển thị bạn đang ngoại tuyến tự nhiên.
+          </p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">link_off</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            Hủy kết nối đôi lập tức và khóa vĩnh viễn quyền truy cập vào vị trí và lịch sử cảm xúc chung.
+          </p>
+</div>
+</div>
+<!-- Silent Block Toggle -->
+<div class="pt-2">
+<label class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low cursor-pointer select-none">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">shield</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Bật chế độ cách ly cảm xúc ngay</span>
+</div>
+<input class="w-5 h-5 accent-primary rounded cursor-pointer" id="block-confirm-toggle" type="checkbox"/>
+</label>
+</div>
+<button class="w-full py-3.5 px-lg rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md hover:opacity-95 active:scale-[0.99] transition-all" id="btn-block-action" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span>
+<span>Chặn người này &amp; bảo vệ tôi</span>
+</button>
+</div>
+</div>
+<!-- Safety Report Section -->
+<div class="mt-xl">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-md text-label-md text-primary tracking-wider uppercase">Báo cáo vi phạm hoặc bất an</span>
+<span class="font-label-sm text-label-sm text-tertiary">Hoàn toàn ẩn danh</span>
+</div>
+<div class="w-full p-lg rounded-[24px] bg-surface-container-lowest shadow-[0_8px_24px_rgba(69,45,61,0.06)] space-y-md">
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Chọn lý do phù hợp nhất với trải nghiệm bạn đã gặp phải. Đội ngũ kiểm duyệt bảo vệ người dùng sẽ xử lý trong vòng 15 phút:
+      </p>
+<!-- Reason Radio Selector -->
+<div class="space-y-2.5" id="report-reason-group">
+<label class="flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="accent-primary w-4 h-4" name="report_reason" type="radio" value="harassment"/>
+<span class="font-body-md text-body-md text-on-surface">Quấy rối hoặc gửi tín hiệu làm phiền liên tục</span>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="accent-primary w-4 h-4" name="report_reason" type="radio" value="explicit"/>
+<span class="font-body-md text-body-md text-on-surface">Nội dung hình ảnh hoặc âm thanh nhạy cảm / không phù hợp</span>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="accent-primary w-4 h-4" name="report_reason" type="radio" value="threat"/>
+<span class="font-body-md text-body-md text-on-surface">Đe dọa, kiểm soát hoặc xâm phạm quyền riêng tư</span>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="accent-primary w-4 h-4" name="report_reason" type="radio" value="other"/>
+<span class="font-body-md text-body-md text-on-surface">Lý do khác cần hỗ trợ bảo hộ tinh thần...</span>
+</label>
+</div>
+<!-- Evidence Attachment Frame -->
+<div class="mt-4 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Tài liệu hoặc ảnh bằng chứng (tùy chọn)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">enhanced_encryption</span> Mã hóa E2EE
+          </span>
+</div>
+<div class="w-full p-4 rounded-2xl bg-surface-container-low flex flex-col items-center justify-center text-center gap-2 cursor-pointer hover:bg-surface-container transition-all" id="upload-box">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+</div>
+<div>
+<div class="font-body-md text-body-md text-on-surface font-medium">Nhấn để đính kèm ảnh hoặc đoạn ghi âm</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Hỗ trợ PNG, JPG, AAC (Tối đa 25MB)</div>
+</div>
+</div>
+<!-- Sample preview pill -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-high">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px]">attachment</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">anh_chup_tin_nhan_bao_ve.png</span>
+</div>
+<button aria-label="Xóa đính kèm" class="text-on-surface-variant hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Confidentiality Note -->
+<div class="p-3 rounded-2xl bg-surface-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">policy</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+          Báo cáo được gửi qua kênh bảo mật tuyệt mật. Tên, định danh và vị trí của bạn sẽ được ẩn hoàn toàn trước đối phương.
+        </p>
+</div>
+<button class="w-full py-3.5 px-lg rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-[0.99] transition-all" id="btn-submit-report" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Gửi báo cáo ẩn danh</span>
+</button>
+</div>
+</div>
+<!-- Emergency & Mental Health Support Card -->
+<div class="mt-xl">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-md text-label-md text-primary tracking-wider uppercase">Tài nguyên hỗ trợ khẩn cấp</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">24/7 Miễn phí</span>
+</div>
+<div class="w-full p-lg rounded-[24px] bg-gradient-to-br from-surface-container-lowest via-surface-container-low to-surface-container shadow-[0_8px_24px_rgba(69,45,61,0.06)] space-y-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary flex items-center justify-center text-on-tertiary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-bold">Đường dây nóng chăm sóc tâm lý &amp; an toàn</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Lắng nghe với lòng trắc ẩn, bảo mật thông tin</p>
+</div>
+</div>
+<!-- Hotlines List -->
+<div class="space-y-2.5">
+<!-- Hotline 1 -->
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm" href="tel:111">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+</div>
+<div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Tổng đài Quốc gia 111</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Bảo vệ quyền lợi, hỗ trợ khủng hoảng 24/7</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">111</span>
+</a>
+<!-- Hotline 2 -->
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm" href="tel:18001768">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">health_and_safety</span>
+</div>
+<div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Ngôi Nhà Bình Yên &amp; Phụ Nữ</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Hỗ trợ tâm lý và nơi lưu trú khẩn cấp</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">1800 1768</span>
+</a>
+<!-- Hotline 3 -->
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm" href="tel:19006444">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+</div>
+<div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Hỗ trợ Tham vấn Tâm lý &amp; Cặp đôi</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Chuyên gia tâm lý đồng hành hồi phục</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold">1900 6444</span>
+</a>
+</div>
+<!-- Quick exit instructions -->
+<div class="p-3 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm space-y-1">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+          Mẹo bảo vệ an toàn tức thì:
+        </div>
+<div>
+          Bấm nút "Thoát nhanh" phía trên hoặc vuốt đóng tab trình duyệt để ngay lập tức che màn hình bằng giao diện thời tiết trung tính.
+        </div>
+</div>
+</div>
+</div>
+<!-- Return Button / Safe Sanctuary Link -->
+<div class="mt-lg pt-2 text-center">
+<button class="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+<span class="font-label-md text-label-md">Quay về không gian bình yên của bạn</span>
+</button>
+</div>
+<!-- Confirmation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-gutter" id="safety-modal">
+<div class="w-full max-w-sm rounded-[24px] bg-surface-container-lowest p-lg shadow-2xl space-y-md">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[26px]">shield_with_heart</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Xác nhận bảo vệ</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Bạn có chắc chắn muốn kích hoạt chế độ chặn và ngắt kết nối với Minh Quân? Bạn hoàn toàn có thể an tâm rằng họ sẽ không nhận thông báo trực tiếp.
+        </p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md" id="modal-confirm-btn" type="button">
+          Đồng ý chặn &amp; kích hoạt an toàn
+        </button>
+<button class="w-full py-2.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md" id="modal-cancel-btn" type="button">
+          Giữ lại xem xét thêm
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interactions and safety quick-actions
+  (function() {
+    const blockBtn = document.getElementById('btn-block-action');
+    const modal = document.getElementById('safety-modal');
+    const modalCancel = document.getElementById('modal-cancel-btn');
+    const modalConfirm = document.getElementById('modal-confirm-btn');
+    const quickExit = document.getElementById('btn-quick-exit');
+    const submitReport = document.getElementById('btn-submit-report');
+    const blockToggle = document.getElementById('block-confirm-toggle');
+
+    if (blockBtn && modal) {
+      blockBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    }
+
+    if (modalCancel && modal) {
+      modalCancel.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+    }
+
+    if (modalConfirm && modal) {
+      modalConfirm.addEventListener('click', () => {
+        modalConfirm.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Đang thiết lập bảo vệ...';
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          if (blockBtn) {
+            blockBtn.disabled = true;
+            blockBtn.classList.replace('bg-primary', 'bg-tertiary');
+            blockBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span> Đã kích hoạt bảo vệ an toàn';
+          }
+          if (blockToggle) {
+            blockToggle.checked = true;
+          }
+        }, 900);
+      });
+    }
+
+    if (submitReport) {
+      submitReport.addEventListener('click', () => {
+        submitReport.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> Báo cáo ẩn danh đã được gửi';
+        submitReport.classList.replace('bg-secondary', 'bg-tertiary');
+        setTimeout(() => {
+          submitReport.innerHTML = '<span class="material-symbols-outlined text-[20px]">send</span> Gửi báo cáo ẩn danh';
+          submitReport.classList.replace('bg-tertiary', 'bg-secondary');
+        }, 2500);
+      });
+    }
+
+    // Quick Exit safety mechanic: instantly redirects to harmless weather/neutral page
+    if (quickExit) {
+      quickExit.addEventListener('click', () => {
+        window.location.href = 'https://www.google.com';
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(69,45,61,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center w-20 h-12 text-on-surface-variant transition-colors group" data-path="cham" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-hover:scale-110 transition-transform">touch_app</span><span class="font-label-sm text-label-sm">Chạm</span></a><a class="flex flex-col items-center justify-center w-20 h-12 text-on-surface-variant transition-colors group" data-path="khoanh-khac" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-hover:scale-110 transition-transform">photo_library</span><span class="font-label-sm text-label-sm">Khoảnh khắc</span></a><a class="flex flex-col items-center justify-center w-20 h-12 text-on-surface-variant transition-colors group" data-path="hai-dua" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-hover:scale-110 transition-transform">favorite</span><span class="font-label-sm text-label-sm">Hai đứa</span></a></div></nav></body></html>

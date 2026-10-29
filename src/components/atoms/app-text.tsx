@@ -1,17 +1,9 @@
 import { Text, type TextProps, type TextStyle } from 'react-native';
 
-import { colors, fonts, typography } from '@/theme';
+import { colors, typography } from '@/theme';
 
-const variants = {
-  display: typography.display,
-  title: typography.title,
-  heading: typography.heading,
-  body: typography.body,
-  bodyMedium: typography.bodyMedium,
-  caption: typography.caption,
-  label: typography.label,
-  code: typography.code,
-} as const;
+export type AppTextVariant = keyof typeof typography;
+export type ColorToken = keyof typeof colors;
 
 const toneColors = {
   primary: colors.text,
@@ -21,14 +13,18 @@ const toneColors = {
 } as const;
 
 export type AppTextProps = TextProps & {
-  readonly variant?: keyof typeof variants;
+  readonly variant?: AppTextVariant;
+  /** Tông màu legacy (Home/Profile cũ). Màn mới dùng `color`. */
   readonly tone?: keyof typeof toneColors;
+  /** Màu theo token của design system Stitch — ưu tiên hơn `tone`. */
+  readonly color?: ColorToken;
   readonly align?: TextStyle['textAlign'];
 };
 
 export function AppText({
   variant = 'body',
   tone = 'primary',
+  color,
   align = 'left',
   style,
   ...rest
@@ -36,12 +32,8 @@ export function AppText({
   return (
     <Text
       style={[
-        variants[variant],
-        {
-          color: toneColors[tone],
-          fontFamily: fonts?.rounded,
-          textAlign: align,
-        },
+        typography[variant],
+        { color: color ? colors[color] : toneColors[tone], textAlign: align },
         style,
       ]}
       {...rest}
